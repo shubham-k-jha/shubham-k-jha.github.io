@@ -1,174 +1,200 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfolio of Shubham Kumar Jha — Data Analyst working with Python, SQL, Power BI, statistics and machine learning." />
-  <meta name="keywords" content="Shubham Kumar Jha, Data Analyst, Python, SQL, Power BI, Data Science, Machine Learning" />
-  <meta property="og:title" content="Shubham Kumar Jha | Data Analyst" />
-  <meta property="og:description" content="Data Analyst portfolio — Python, SQL, Power BI, statistics and machine learning." />
-  <title>Shubham Kumar Jha | Data Analyst</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Shubham Kumar Jha — Data Analyst and Aspiring Data Scientist. Python, SQL, Power BI, statistics, machine learning and scientific data analytics portfolio.">
+  <meta name="author" content="Shubham Kumar Jha">
+  <meta name="keywords" content="Shubham Kumar Jha, Data Analyst, Data Scientist, Python, SQL, Power BI, Statistics, Machine Learning, Research Data Analytics">
+  <link rel="canonical" href="https://shubham-k-jha.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Shubham Kumar Jha | Data Analyst Portfolio">
+  <meta property="og:description" content="Research-to-data portfolio featuring analytics, SQL, Python, BI and machine learning projects.">
+  <meta property="og:url" content="https://shubham-k-jha.github.io/">
+  <meta property="og:image" content="https://shubham-k-jha.github.io/assets/og-card.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Shubham Kumar Jha | Data Analyst Portfolio">
+  <meta name="twitter:description" content="Python, SQL, Power BI, statistics, machine learning and scientific data analytics.">
+  <meta name="theme-color" content="#07111f">
+  <title>Shubham Kumar Jha | Data Analyst Portfolio</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="progress" id="progress"></div>
-  <header class="nav-wrap">
-    <nav class="nav container">
-      <a class="brand" href="#home">SKJ<span>.</span></a>
-      <button class="menu-btn" id="menuBtn" aria-label="Open navigation">☰</button>
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <div class="site-glow glow-one" aria-hidden="true"></div>
+  <div class="site-glow glow-two" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <nav class="nav shell" aria-label="Primary navigation">
+      <a class="brand" href="#home" aria-label="Shubham Jha home"><span>S</span>J</a>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu"><span></span><span></span><span></span></button>
       <div class="nav-links" id="navLinks">
         <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#research">Research</a>
         <a href="#education">Education</a>
         <a href="#contact">Contact</a>
-        <button class="theme-btn" id="themeBtn" aria-label="Toggle theme">◐</button>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light mode">☾</button>
       </div>
     </nav>
   </header>
 
   <main>
-    <section class="hero container" id="home">
+    <section class="hero shell section-pad" id="home">
       <div class="hero-copy reveal">
-        <div class="eyebrow"><span class="dot"></span> Open to Data Analytics opportunities</div>
-        <h1>Turning complex data into <span>clear insights.</span></h1>
-        <p class="hero-text">I’m Shubham Kumar Jha — a Data Analyst with a research background, working across Python, SQL, statistics, visualization, business analytics and machine learning.</p>
+        <div class="kicker"><span class="pulse"></span> Research → Data Analytics → Data Science</div>
+        <h1>Data Analyst.<br><span>Scientific mindset.</span><br>Practical insights.</h1>
+        <p class="hero-lead">I’m Shubham Kumar Jha, a Data Analyst with 4+ years of quantitative research experience, using Python, SQL, statistics and BI tools to turn complex datasets into clean, decision-ready insights.</p>
         <div class="hero-actions">
-          <a class="btn primary" href="#projects">Explore my work <span>↗</span></a>
-          <a class="btn secondary" href="assets/Shubham_Kumar_Jha_Resume.pdf" target="_blank" rel="noopener">View Resume</a>
+          <a class="btn btn-primary" href="#projects">View projects <span>↘</span></a>
+          <a class="btn btn-ghost" href="assets/Shubham_Kumar_Jha_CV.pdf" download>Download CV <span>↓</span></a>
         </div>
-        <div class="socials">
-          <a href="https://www.linkedin.com/in/shubhamkjha-datascience" target="_blank" rel="noopener">LinkedIn ↗</a>
-          <a href="https://github.com/shubham-k-jha" target="_blank" rel="noopener">GitHub ↗</a>
+        <div class="hero-links" aria-label="Professional links">
+          <a href="https://github.com/shubham-k-jha" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          <a href="https://www.linkedin.com/in/shubhamkjha-datascience" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
           <a href="mailto:sjha31190@gmail.com">Email ↗</a>
         </div>
       </div>
-      <div class="hero-card reveal delay-1">
-        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
-        <div class="profile-mark">SKJ</div>
-        <div class="floating-card card-one"><b>Python</b><span>Analysis · Automation</span></div>
-        <div class="floating-card card-two"><b>SQL</b><span>Business questions → data</span></div>
-        <div class="floating-card card-three"><b>Power BI</b><span>Dashboards · Storytelling</span></div>
+
+      <div class="hero-visual reveal delay-1" aria-label="Abstract data and science visualization">
+        <div class="visual-grid"></div>
+        <div class="sun-core" aria-hidden="true"></div>
+        <div class="orbit orbit-1"></div><div class="orbit orbit-2"></div><div class="orbit orbit-3"></div>
+        <div class="data-line line-a"></div><div class="data-line line-b"></div>
+        <div class="visual-card vc-python"><span class="mini-icon">Py</span><div><b>Python</b><small>Analysis · Automation</small></div></div>
+        <div class="visual-card vc-sql"><span class="mini-icon">SQL</span><div><b>SQL</b><small>Questions → data</small></div></div>
+        <div class="visual-card vc-bi"><span class="mini-icon">▥</span><div><b>Power BI</b><small>KPI · Reporting</small></div></div>
+        <div class="visual-card vc-ml"><span class="mini-icon">ML</span><div><b>Machine Learning</b><small>Models · Validation</small></div></div>
+        <div class="chart-bars" aria-hidden="true"><i style="height:32%"></i><i style="height:48%"></i><i style="height:42%"></i><i style="height:68%"></i><i style="height:58%"></i><i style="height:82%"></i><i style="height:96%"></i></div>
+        <div class="visual-caption">DATA / SCIENCE / INSIGHT</div>
       </div>
     </section>
 
-    <section class="metrics container reveal">
-      <div><strong>4+</strong><span>Years quantitative data experience</span></div>
-      <div><strong>525K+</strong><span>Retail transaction rows analysed</span></div>
+    <section class="proof-strip shell reveal" aria-label="Portfolio highlights">
+      <div><strong>4+</strong><span>Years quantitative research experience</span></div>
+      <div><strong>525K+</strong><span>Transaction rows analysed</span></div>
       <div><strong>8.4K+</strong><span>Retail order lines analysed</span></div>
-      <div><strong>0.845</strong><span>Held-out ROC-AUC benchmark</span></div>
+      <div><strong>0.8448</strong><span>Held-out ROC-AUC</span></div>
     </section>
 
-    <section class="section container" id="about">
-      <div class="section-head reveal"><span>01</span><h2>About me</h2></div>
+    <section class="section-pad shell" id="about">
+      <div class="section-heading reveal"><span>01 / ABOUT</span><h2>From research problems<br>to data problems.</h2></div>
       <div class="about-grid">
-        <div class="about-lead reveal">
-          <p class="large">My background is in scientific research, where I learned to work with complex datasets, validate results, automate analysis and communicate findings clearly.</p>
-          <p>I’m now applying that analytical mindset to business and real-world data problems. My portfolio combines SQL business analysis, Python analytics, statistical testing, BI-ready reporting and machine learning.</p>
-          <p>I’m particularly interested in roles where strong analytical thinking, curiosity and practical data skills can create measurable value.</p>
+        <div class="about-story reveal">
+          <p class="lead-copy">My background is in scientific research, where I learned to work with large and messy datasets, validate analytical outputs, automate repetitive workflows and communicate results to multidisciplinary audiences.</p>
+          <p>I’m applying those habits to business and product analytics: defining questions, cleaning data, building reliable analysis, testing assumptions, visualising patterns and translating results into decisions.</p>
+          <p>The goal is not to replace my research background — it is to carry the strongest parts of it into data analytics and data science.</p>
         </div>
-        <div class="about-points reveal delay-1">
-          <div class="point"><span>01</span><div><b>Ask the right question</b><p>Translate ambiguous problems into measurable analytical questions.</p></div></div>
-          <div class="point"><span>02</span><div><b>Build reliable analysis</b><p>Clean, validate, explore and model data with reproducible workflows.</p></div></div>
-          <div class="point"><span>03</span><div><b>Communicate the result</b><p>Turn technical output into visuals, insights and decision-ready stories.</p></div></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section dark-section" id="experience">
-      <div class="container">
-        <div class="section-head reveal"><span>02</span><h2>Experience</h2></div>
-        <div class="timeline">
-          <article class="timeline-item reveal">
-            <div class="timeline-date">Aug 2025 — Present</div>
-            <div class="timeline-content">
-              <h3>Junior Research Fellow — Data Analytics</h3><h4>National Institute of Technology Delhi · Delhi, India · DST-funded</h4>
-              <ul><li>Analyse large-scale, multi-instrument observational datasets with Python to identify trends, anomalies and patterns supporting research decisions.</li><li>Design and automate end-to-end data-processing workflows covering extraction, validation, transformation, analysis, visualization and reporting.</li><li>Apply EDA, statistical testing and time-series methods to complex, high-dimensional datasets.</li><li>Develop publication-quality visualizations and communicate analytical findings to multidisciplinary teams.</li></ul>
-            </div>
-          </article>
-          <article class="timeline-item reveal">
-            <div class="timeline-date">Aug 2022 — Apr 2025</div>
-            <div class="timeline-content">
-              <h3>Junior Research Fellow</h3><h4>Indian Institute of Astrophysics · Bengaluru, India · MoE-funded</h4>
-              <ul><li>Processed high-volume observational datasets from multiple space missions using Python-based analytical workflows.</li><li>Built reusable scripts for data extraction, cleaning, transformation and visualization.</li><li>Applied correlation analysis, trend detection and statistical methods to identify patterns and anomalies in noisy real-world datasets.</li><li>Automated repetitive processing and cross-validated computational results against independent observational benchmarks.</li></ul>
-            </div>
-          </article>
+        <div class="principles reveal delay-1">
+          <div class="principle"><span>01</span><div><h3>Question first</h3><p>Turn ambiguous problems into measurable analytical questions.</p></div></div>
+          <div class="principle"><span>02</span><div><h3>Validate the data</h3><p>Clean, check and cross-validate before trusting an output.</p></div></div>
+          <div class="principle"><span>03</span><div><h3>Explain the result</h3><p>Use clear visuals and language for technical and non-technical audiences.</p></div></div>
         </div>
       </div>
     </section>
 
-    <section class="section container" id="projects">
-      <div class="section-head reveal"><span>03</span><h2>Selected projects</h2></div>
-      <div class="filter-bar reveal">
-        <button class="filter active" data-filter="all">All</button><button class="filter" data-filter="analytics">Analytics</button><button class="filter" data-filter="ml">Machine Learning</button><button class="filter" data-filter="science">Scientific ML</button>
-      </div>
-      <div class="project-grid">
-        <article class="project featured-project reveal" data-type="analytics">
-          <div class="project-top"><span class="project-num">01</span><span class="tag">Analytics</span></div>
-          <h3>Superstore Sales & Profitability Analysis</h3>
-          <p>End-to-end retail analytics across 8,399 order lines and 5,496 orders, covering data cleaning, star-schema modelling, SQL analysis, Python visualization and BI-ready reporting.</p>
-          <div class="stat-row"><div><b>50.8%</b><span>loss-making order lines</span></div><div><b>10.2%</b><span>overall profit margin</span></div></div>
-          <div class="chips"><span>SQL</span><span>Python</span><span>Power BI</span><span>Excel</span></div>
-          <a class="project-link" href="https://github.com/shubham-k-jha/superstore-analysis" target="_blank" rel="noopener">View repository →</a>
-        </article>
-        <article class="project reveal delay-1" data-type="analytics ml">
-          <div class="project-top"><span class="project-num">02</span><span class="tag">Analytics + ML</span></div>
-          <h3>UCI Online Retail II</h3>
-          <p>Customer analytics and predictive modelling on 525,461 transaction rows, including data quality, EDA, statistical inference, RFM analysis and cancellation classification.</p>
-          <div class="stat-row"><div><b>0.8448</b><span>held-out ROC-AUC</span></div><div><b>0.60</b><span>selected threshold</span></div></div>
-          <div class="chips"><span>Python</span><span>Pandas</span><span>PySpark</span><span>Scikit-learn</span></div>
-          <a class="project-link" href="https://github.com/shubham-k-jha/online-retail-analytics" target="_blank" rel="noopener">View repository →</a>
-        </article>
-        <article class="project reveal delay-2" data-type="science ml">
-          <div class="project-top"><span class="project-num">03</span><span class="tag">Scientific ML</span></div>
-          <h3>Solar Active-Region ML Benchmark</h3>
-          <p>Reproducible benchmark using published solar active-region catalogues for flare-productivity classification and continuous regression.</p>
-          <div class="stat-row"><div><b>XGBoost</b><span>model family</span></div><div><b>SHAP</b><span>interpretation</span></div></div>
-          <div class="chips"><span>Python</span><span>XGBoost</span><span>SHAP</span><span>Statistics</span></div>
-          <a class="project-link" href="https://github.com/shubham-k-jha/solar-ar-kutsenko-ml" target="_blank" rel="noopener">View repository →</a>
-        </article>
-      </div>
-    </section>
-
-    <section class="section skills-section" id="skills">
-      <div class="container">
-        <div class="section-head reveal"><span>04</span><h2>Skills & toolkit</h2></div>
+    <section class="section-pad alt-section" id="skills">
+      <div class="shell">
+        <div class="section-heading reveal"><span>02 / SKILLS</span><h2>A practical analytics toolkit.</h2><p>No inflated skill bars. Just the tools and methods documented in my current CV.</p></div>
         <div class="skill-grid">
-          <div class="skill-card reveal"><span class="skill-icon">⌘</span><h3>Data Analysis</h3><p>Python · Pandas · NumPy · SciPy · EDA · Data Cleaning · Data Wrangling · Time-Series</p></div>
-          <div class="skill-card reveal delay-1"><span class="skill-icon">▤</span><h3>SQL & Databases</h3><p>SQL · MySQL · PostgreSQL · SQLite · Joins · CTEs · Subqueries · Window Functions</p></div>
-          <div class="skill-card reveal delay-2"><span class="skill-icon">▥</span><h3>BI & Visualization</h3><p>Power BI · DAX · Excel · Power Query · Matplotlib · Seaborn · Plotly · Dashboard Development</p></div>
-          <div class="skill-card reveal"><span class="skill-icon">◈</span><h3>Machine Learning</h3><p>Scikit-learn · XGBoost · Classification · Regression · Feature Engineering · Cross-Validation · SHAP</p></div>
-          <div class="skill-card reveal delay-1"><span class="skill-icon">Σ</span><h3>Statistics</h3><p>Hypothesis Testing · Welch’s t-test · Mann–Whitney U · Confidence Intervals · Effect Size · A/B Testing</p></div>
-          <div class="skill-card reveal delay-2"><span class="skill-icon">⚙</span><h3>Tools & Workflow</h3><p>Git · GitHub · Jupyter · Linux/Unix · Bash · VS Code · Streamlit · AWS Fundamentals</p></div>
+          <article class="skill-card reveal"><div class="skill-mark">01</div><h3>Data Analysis</h3><div class="chips"><span>Python</span><span>Pandas</span><span>NumPy</span><span>SciPy</span><span>EDA</span><span>Data Cleaning</span><span>Time Series</span><span>Anomaly Detection</span></div></article>
+          <article class="skill-card reveal delay-1"><div class="skill-mark">02</div><h3>SQL & Databases</h3><div class="chips"><span>SQL</span><span>MySQL</span><span>PostgreSQL</span><span>SQLite</span><span>Joins</span><span>CTEs</span><span>Window Functions</span><span>Star Schema</span></div></article>
+          <article class="skill-card reveal delay-2"><div class="skill-mark">03</div><h3>BI & Visualisation</h3><div class="chips"><span>Power BI</span><span>DAX</span><span>Power Query</span><span>Tableau</span><span>Excel</span><span>Matplotlib</span><span>Seaborn</span><span>Plotly</span></div></article>
+          <article class="skill-card reveal"><div class="skill-mark">04</div><h3>Statistics</h3><div class="chips"><span>Hypothesis Testing</span><span>A/B Testing</span><span>Statistical Inference</span><span>KPI Analysis</span><span>Data Validation</span></div></article>
+          <article class="skill-card reveal delay-1"><div class="skill-mark">05</div><h3>Machine Learning</h3><div class="chips"><span>Scikit-learn</span><span>XGBoost</span><span>Classification</span><span>Regression</span><span>Feature Engineering</span><span>Cross-Validation</span><span>SHAP</span><span>ROC-AUC / PR-AUC</span></div></article>
+          <article class="skill-card reveal delay-2"><div class="skill-mark">06</div><h3>Tools & Cloud</h3><div class="chips"><span>Git</span><span>GitHub</span><span>Streamlit</span><span>Jupyter</span><span>Linux / Bash</span><span>VS Code</span><span>AWS Fundamentals</span><span>Google Analytics</span></div></article>
         </div>
       </div>
     </section>
 
-    <section class="section container" id="education">
-      <div class="section-head reveal"><span>05</span><h2>Education</h2></div>
-      <div class="education-grid">
-        <article class="edu-card reveal"><span>2020 — 2022</span><h3>M.Sc. Physics</h3><p>National Institute of Technology Manipur</p><strong>CGPA 8.62 / 10</strong></article>
-        <article class="edu-card reveal delay-1"><span>2015 — 2018</span><h3>B.Sc. Physical Science</h3><p>University of Delhi</p><strong>CGPA 7.82 / 10</strong></article>
-        <article class="edu-card reveal delay-2"><span>2022</span><h3>GATE — Physics</h3><p>Graduate Aptitude Test in Engineering</p><strong>Qualified</strong></article>
+    <section class="section-pad shell" id="projects">
+      <div class="section-heading reveal"><span>03 / PROJECTS</span><h2>Evidence, not buzzwords.</h2><p>End-to-end work across business analytics, customer modelling and scientific machine learning.</p></div>
+      <div class="filter-row reveal" role="group" aria-label="Project filters">
+        <button class="filter active" data-filter="all">All</button><button class="filter" data-filter="analytics">Analytics</button><button class="filter" data-filter="ml">Machine Learning</button><button class="filter" data-filter="research">Research</button>
       </div>
-      <div class="achievement reveal"><b>Research & achievements</b><span>DST-funded JRF · MoE-funded JRF · First-author manuscript in preparation · IIA In-house Symposium presentation</span></div>
+
+      <article class="featured-project reveal" data-project="analytics">
+        <div class="featured-copy">
+          <div class="project-label">FEATURED PROJECT / 01</div>
+          <h3>Superstore Sales, Profitability & Margin Analysis</h3>
+          <p>End-to-end retail analytics across <b>8,399 order lines</b> and <b>5,496 orders</b>, covering data cleaning, star-schema modelling, SQL analysis and BI reporting.</p>
+          <div class="finding-grid"><div><strong>50.8%</strong><span>order lines were loss-making</span></div><div><strong>10.2%</strong><span>overall profit margin</span></div><div><strong>8</strong><span>business questions answered</span></div></div>
+          <div class="project-actions"><a class="btn btn-primary" href="https://github.com/shubham-k-jha/superstore-analysis" target="_blank" rel="noopener noreferrer">View GitHub ↗</a></div>
+        </div>
+        <div class="project-visual retail-visual" aria-hidden="true"><div class="bar b1"></div><div class="bar b2"></div><div class="bar b3"></div><div class="bar b4"></div><div class="bar b5"></div><div class="line-chart"></div><div class="visual-note">SALES<br><b>→</b> PROFIT<br><b>→</b> DECISION</div></div>
+      </article>
+
+      <div class="project-grid">
+        <article class="project-card reveal" data-project="analytics ml">
+          <div class="project-index">02 <span>ANALYTICS + ML</span></div>
+          <h3>UCI Online Retail II</h3>
+          <p>Customer analytics and predictive modelling across 525,461 raw transaction rows, with data quality checks, statistical testing, feature engineering and cancellation classification.</p>
+          <div class="metric"><strong>0.8448</strong><span>held-out ROC-AUC</span></div>
+          <div class="chips"><span>Python</span><span>Pandas</span><span>Scikit-learn</span><span>Statistics</span></div>
+          <a class="text-link" href="https://github.com/shubham-k-jha/online-retail-analytics" target="_blank" rel="noopener noreferrer">Repository ↗</a>
+        </article>
+        <article class="project-card reveal delay-1" data-project="research ml">
+          <div class="project-index">03 <span>SCIENTIFIC ML</span></div>
+          <h3>Solar Active-Region ML Benchmark</h3>
+          <p>Reproducible benchmark on a published solar active-region catalogue for flare-productivity classification and regression.</p>
+          <div class="metric"><strong>XGBoost</strong><span>with SHAP interpretation</span></div>
+          <div class="chips"><span>Python</span><span>XGBoost</span><span>SHAP</span><span>ROC-AUC</span><span>PR-AUC</span></div>
+          <a class="text-link" href="https://github.com/shubham-k-jha/solar-ar-kutsenko-ml" target="_blank" rel="noopener noreferrer">Repository ↗</a>
+        </article>
+      </div>
+      <p class="project-note reveal">More work is represented in my CV and GitHub; this portfolio highlights the projects most relevant to analytics and data science roles.</p>
     </section>
 
-    <section class="section contact-section" id="contact">
-      <div class="container contact-inner reveal">
-        <span class="eyebrow">06 · LET’S CONNECT</span>
-        <h2>Have a data problem worth exploring?</h2>
-        <p>I’m open to Data Analyst, Analytics Analyst, BI Analyst and Junior/Associate Data Scientist opportunities.</p>
-        <div class="contact-actions"><a class="btn primary" href="mailto:sjha31190@gmail.com">Email me ↗</a><a class="btn secondary" href="https://www.linkedin.com/in/shubhamkjha-datascience" target="_blank" rel="noopener">LinkedIn ↗</a><a class="btn secondary" href="https://github.com/shubham-k-jha" target="_blank" rel="noopener">GitHub ↗</a></div>
+    <section class="section-pad dark-section" id="experience">
+      <div class="shell">
+        <div class="section-heading reveal"><span>04 / EXPERIENCE</span><h2>Research experience,<br>reframed through data.</h2></div>
+        <div class="experience-list">
+          <article class="experience-item reveal"><div class="experience-meta"><span>Aug '25 — Present</span><b>NIT Delhi</b></div><div><h3>Junior Research Fellow — Data Analytics</h3><p class="org">National Institute of Technology Delhi · Delhi, India</p><ul><li>Analyse large, multi-instrument observational datasets in Python to identify trends, anomalies and decision-relevant patterns.</li><li>Design and automate end-to-end ETL workflows covering extraction, cleaning, transformation, validation, visualisation and reporting.</li><li>Apply EDA, correlation analysis and time-series methods to complex, high-dimensional datasets.</li><li>Build publication-quality visualisations and dashboards and communicate findings to multidisciplinary stakeholders.</li><li>Validate analytical outputs against independent checks before reporting results.</li></ul></div></article>
+          <article class="experience-item reveal"><div class="experience-meta"><span>Aug '22 — Apr '25</span><b>IIA</b></div><div><h3>Junior Research Fellow</h3><p class="org">Indian Institute of Astrophysics · Bengaluru, India</p><ul><li>Processed and analysed high-volume observational data from multiple space missions using custom Python workflows.</li><li>Built reusable pipelines for extraction, cleaning, transformation and visualisation.</li><li>Applied statistical, correlation and trend analysis to identify patterns in noisy real-world data.</li><li>Automated repetitive processing tasks and validated outputs against independent benchmarks.</li><li>Translated technical findings into clear visuals and insights for mixed audiences.</li></ul></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad shell" id="research">
+      <div class="section-heading reveal"><span>05 / RESEARCH</span><h2>The research background<br>is part of the edge.</h2><p>Presented as transferable analytical experience — not an academic wall of text.</p></div>
+      <div class="research-grid">
+        <div class="research-card big reveal"><div class="research-art"><div class="solar-disc"></div><div class="signal signal-1"></div><div class="signal signal-2"></div><div class="signal signal-3"></div></div><div><h3>Scientific data analysis</h3><p>Solar active-region studies using HMI, AIA and GOES data, with Python-based processing, visualisation and time-series analysis.</p></div></div>
+        <div class="research-card reveal delay-1"><span>01</span><h3>Complex datasets</h3><p>Work with high-volume observational data and noisy measurements.</p></div>
+        <div class="research-card reveal delay-2"><span>02</span><h3>Validation</h3><p>Cross-check computational outputs against independent benchmarks.</p></div>
+        <div class="research-card reveal"><span>03</span><h3>Scientific Python</h3><p>Use Python workflows for extraction, cleaning, analysis and visualisation.</p></div>
+        <div class="research-card reveal delay-1"><span>04</span><h3>Communication</h3><p>Translate technical findings into clear visuals and conclusions.</p></div>
+      </div>
+    </section>
+
+    <section class="section-pad alt-section" id="education">
+      <div class="shell">
+        <div class="section-heading reveal"><span>06 / EDUCATION</span><h2>Academic foundation.</h2></div>
+        <div class="education-grid">
+          <article class="education-card reveal"><span>2020 — 2022</span><h3>M.Sc. Physics</h3><p>National Institute of Technology Manipur</p><strong>CGPA 8.62 / 10.0</strong><small>Quantum Mechanics · Statistical Physics · Numerical Methods · Computational Physics</small></article>
+          <article class="education-card reveal delay-1"><span>2015 — 2018</span><h3>B.Sc. Physical Science</h3><p>University of Delhi</p><strong>CGPA 7.82 / 10.0</strong><small>Quantum Mechanics · Statistical Physics</small></article>
+          <article class="education-card reveal delay-2"><span>Jan 2022</span><h3>GATE — Physics</h3><p>Graduate Aptitude Test in Engineering</p><strong>Qualified 2022</strong><small>Quantitative and analytical foundation supporting research and technical work.</small></article>
+        </div>
+        <div class="achievements reveal"><span><b>DST-funded</b> JRF at NIT Delhi</span><span><b>MoE-funded</b> JRF at IIA</span><span><b>First author</b> manuscript prepared for peer-reviewed publication</span><span><b>IIA Symposium</b> research presentation</span></div>
+      </div>
+    </section>
+
+    <section class="section-pad shell" id="contact">
+      <div class="contact-card reveal">
+        <div><div class="kicker">07 / CONTACT</div><h2>Let’s talk about data, analytics or research.</h2><p>For recruiters, hiring managers, data professionals and research collaborators — the easiest way to reach me is email or LinkedIn.</p></div>
+        <div class="contact-actions"><a class="btn btn-primary" href="mailto:sjha31190@gmail.com">Email me ↗</a><a class="btn btn-light" href="https://www.linkedin.com/in/shubhamkjha-datascience" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a class="btn btn-light" href="https://github.com/shubham-k-jha" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
+        <button class="copy-email" id="copyEmail" type="button" data-email="sjha31190@gmail.com">Copy email</button><span class="copy-status" id="copyStatus" role="status" aria-live="polite"></span>
       </div>
     </section>
   </main>
 
-  <footer><div class="container footer-inner"><span>© <span id="year"></span> Shubham Kumar Jha</span><span>Built with HTML · CSS · JavaScript</span></div></footer>
+  <footer><div class="shell footer-inner"><div><strong>Shubham Kumar Jha</strong><span> · Data Analyst | Aspiring Data Scientist</span></div><div><a href="#top">Back to top ↑</a><span>© <span id="year"></span> Shubham Jha</span></div></div></footer>
+  <button class="back-top" id="backTop" aria-label="Back to top">↑</button>
   <script src="script.js"></script>
 </body>
 </html>

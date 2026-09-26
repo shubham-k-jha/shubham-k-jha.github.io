@@ -1,34 +1,30 @@
 # Shubham Kumar Jha — Personal Portfolio
 
-A responsive, recruiter-focused portfolio website built from the current Data Analyst CV and project information.
+Static GitHub Pages portfolio for **Shubham Kumar Jha — Data Analyst | Aspiring Data Scientist | Research-to-Data Professional**.
 
-## Included
-- Responsive single-page portfolio
-- Dark/light theme toggle
-- Scroll progress bar and reveal animations
-- Experience timeline
-- Project cards with category filtering
-- Skills, education and achievements
-- Resume PDF download/view
-- LinkedIn, GitHub and email links
-- No framework or build step required
+## Deploy on GitHub Pages
 
-## Run locally
-Open `index.html` in a browser, or serve the folder:
+1. Create a **public** repository named `shubham-k-jha.github.io`.
+2. Upload the contents of this folder so `index.html` is at the repository root.
+3. Go to **Settings → Pages**.
+4. Under **Build and deployment**, choose **Deploy from a branch**.
+5. Select `main` and `/ (root)` and save.
+6. Open `https://shubham-k-jha.github.io/` after deployment completes.
 
-```bash
-python -m http.server 8000
-```
+## Files
 
-Then open `http://localhost:8000`.
+- `index.html` — semantic page structure and content
+- `style.css` — responsive design system and animations
+- `script.js` — theme, mobile navigation, filtering, reveal effects and interactions
+- `assets/Shubham_Kumar_Jha_CV.pdf` — current CV
+- `assets/favicon.svg` — favicon
+- `assets/og-card.svg` — social sharing image
 
-## Deploy to GitHub Pages
-1. Create a public repository named `shubham-k-jha.github.io`.
-2. Upload `index.html`, `style.css`, `script.js`, `README.md`, and the `assets` folder.
-3. GitHub → Settings → Pages → Deploy from branch → `main` → `/`.
-4. Your site will be available at `https://shubham-k-jha.github.io`.
+## Notes
 
-## Personal links used
-- LinkedIn: https://www.linkedin.com/in/shubham-k-jha
-- GitHub: https://github.com/shubham-k-jha
-- Email: sjha31190@gmail.com
+- No backend is required.
+- No framework is required.
+- All portfolio claims are based on the supplied CV.
+- Project links point to the supplied GitHub repositories.
+- No skill-percentage bars are used.
+- The site supports dark/light mode and `prefers-reduced-motion`.
