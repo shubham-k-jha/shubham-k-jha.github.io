@@ -29,6 +29,6 @@ Then open `http://localhost:8000`.
 4. Your site will be available at `https://shubham-k-jha.github.io`.
 
 ## Personal links used
-- LinkedIn: https://www.linkedin.com/in/shubhamkjha-datascience
+- LinkedIn: https://www.linkedin.com/in/shubham-k-jha
 - GitHub: https://github.com/shubham-k-jha
 - Email: sjha31190@gmail.com
