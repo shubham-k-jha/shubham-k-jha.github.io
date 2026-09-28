@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360">
+<defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="#7c3aed"/><stop offset=".55" stop-color="#06b6d4"/><stop offset="1" stop-color="#f59e0b"/></linearGradient>
+<filter id="glow"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+<rect width="640" height="360" rx="34" fill="#07111f"/>
+<g transform="translate(170 72)" filter="url(#glow)">
+<rect width="300" height="216" rx="12" fill="#0d1b30" stroke="url(#g)" stroke-width="4"/>
+<g opacity=".95">
+<path d="M0 0h37.5v27H0zM75 0h37.5v27H75zM150 0h37.5v27H150zM225 0h37.5v27H225z" fill="#162c48"/>
+<path d="M37.5 27h37.5v27H37.5zM112.5 27H150v27h-37.5zM187.5 27H225v27h-37.5zM262.5 27H300v27h-37.5z" fill="#274565"/>
+<path d="M0 54h37.5v27H0zM75 54h37.5v27H75zM150 54h37.5v27H150zM225 54h37.5v27H225z" fill="#274565"/>
+<path d="M37.5 81h37.5v27H37.5zM112.5 81H150v27h-37.5zM187.5 81H225v27h-37.5zM262.5 81H300v27h-37.5z" fill="#162c48"/>
+</g>
+<text x="95" y="175" fill="#fff" font-size="76" font-family="Georgia,serif">♟</text>
+<text x="190" y="95" fill="#fff" font-size="58" font-family="Georgia,serif">♞</text></g>
+<text x="320" y="48" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-weight="800" font-size="25" letter-spacing="5">NEON CHESS</text>
+<text x="320" y="330" text-anchor="middle" fill="#8ea3bd" font-family="Arial,sans-serif" font-size="13" letter-spacing="3">CHESS • AI • BROWSER GAME</text></svg>
