@@ -52,3 +52,11 @@ document.querySelectorAll('.filter').forEach(filter=>filter.addEventListener('cl
   });
 }));
 document.getElementById('year').textContent=new Date().getFullYear();
+document.addEventListener('keydown',(e)=>{
+  if(e.target.matches('input,textarea')) return;
+  const map={1:'#projects',2:'#apps',3:'#games',4:'#research'};
+  if(map[e.key]) document.querySelector(map[e.key])?.scrollIntoView({behavior:'smooth'});
+});
+document.querySelectorAll('a[href*="streamlit.app"]').forEach(a=>{
+  a.addEventListener('click',()=>{a.setAttribute('aria-label','Open live Streamlit app in a new tab')});
+});
