@@ -1,2580 +1,2382 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<meta name="description" content="Shubham Kumar Jha — Data Analyst, Python Developer and aspiring Data Scientist. Analytics, BI, machine learning, scientific computing and interactive projects.">
-<meta name="author" content="Shubham Kumar Jha">
-
-<link rel="canonical" href="https://shubham-k-jha.github.io/">
-
-<meta property="og:type" content="website">
-<meta property="og:title" content="Shubham Jha | Data • Research • Build">
-<meta property="og:description" content="Data analytics, machine learning, scientific computing and interactive projects.">
-<meta property="og:url" content="https://shubham-k-jha.github.io/">
-<meta property="og:image" content="https://shubham-k-jha.github.io/assets/og-card.svg">
-
-<meta name="theme-color" content="#07111f">
-
-<title>Shubham Jha | Data • Research • Build</title>
-
-<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link
-  href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
-  rel="stylesheet"
->
-
-<link rel="stylesheet" href="style.css">
-
-<style>
-
-/* =========================================================
-   PORTFOLIO ENHANCEMENT LAYER
-   ========================================================= */
-
-:root {
-  --pa-accent: #61dafb;
-  --pa-accent-2: #8b5cf6;
-  --pa-line: rgba(15, 23, 42, 0.10);
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  overflow-x: hidden;
-}
-
-::selection {
-  background: var(--pa-accent);
-  color: #06101d;
-}
-
-a,
-button {
-  transition: all 0.22s ease;
-}
-
-a:focus-visible,
-button:focus-visible {
-  outline: 3px solid var(--pa-accent);
-  outline-offset: 4px;
-}
-
-/* Scroll progress */
-
-.scroll-progress {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 3px;
-  background: linear-gradient(
-    90deg,
-    var(--pa-accent),
-    var(--pa-accent-2)
-  );
-  z-index: 99999;
-}
-
-/* Hero */
-
-.hero-copy h1 em {
-  background: linear-gradient(
-    90deg,
-    var(--pa-accent),
-    #9b8cff
-  );
-
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.13);
-}
-
-.nav-links a:hover {
-  color: var(--pa-accent);
-}
-
-/* =========================================================
-   PROJECT FILTERS
-   ========================================================= */
-
-.filter-row {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin: 0 0 26px;
-}
-
-.filter {
-  border: 1px solid var(--pa-line);
-  background: rgba(255, 255, 255, 0.7);
-  border-radius: 999px;
-  padding: 10px 16px;
-  font: inherit;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.filter:hover,
-.filter.active {
-  background: #07111f;
-  color: #fff;
-  border-color: #07111f;
-}
-
-.project-card.is-hidden,
-.project-feature.is-hidden {
-  display: none;
-}
-
-/* =========================================================
-   CARD HOVER
-   ========================================================= */
-
-.stats > div,
-.skill-card,
-.project-card,
-.mini-card,
-.edu-card {
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
-}
-
-.stats > div:hover,
-.skill-card:hover,
-.project-card:hover,
-.mini-card:hover,
-.edu-card:hover {
-  transform: translateY(-7px);
-  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.11);
-}
-
-/* =========================================================
-   LIVE APPS
-   ========================================================= */
-
-.app-launch-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.app-card {
-  position: relative;
-  padding: 28px;
-
-  border: 1px solid rgba(255,255,255,.13);
-  border-radius: 24px;
-
-  background:
-    linear-gradient(
-      145deg,
-      rgba(255,255,255,.10),
-      rgba(255,255,255,.04)
-    );
-
-  backdrop-filter: blur(14px);
-  overflow: hidden;
-}
-
-.app-card::after {
-  content: "";
-  position: absolute;
-
-  width: 220px;
-  height: 220px;
-
-  right: -100px;
-  bottom: -100px;
-
-  background: radial-gradient(
-    circle,
-    rgba(97,218,251,.18),
-    transparent 65%
-  );
-
-  pointer-events: none;
-}
-
-.app-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  margin-bottom: 20px;
-}
-
-.app-logo {
-  display: grid;
-  place-items: center;
-
-  min-width: 52px;
-  height: 52px;
-
-  padding: 0 10px;
-
-  border-radius: 15px;
-
-  background: rgba(255,255,255,.1);
-
-  font-weight: 800;
-}
-
-.live-dot {
-  font-size: 11px;
-  letter-spacing: .12em;
-  color: #74f0b2;
-}
-
-.app-kicker,
-.game-meta {
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: .13em;
-}
-
-.app-card h3 {
-  font-size: 28px;
-  margin: 9px 0;
-}
-
-.app-card p {
-  color: rgba(255,255,255,.68);
-  min-height: 60px;
-}
-
-.app-tags {
-  display: flex;
-  gap: 7px;
-  flex-wrap: wrap;
-
-  margin: 18px 0;
-}
-
-.app-tags span {
-  font-size: 12px;
-
-  border: 1px solid rgba(255,255,255,.13);
-
-  border-radius: 999px;
-
-  padding: 6px 10px;
-
-  color: rgba(255,255,255,.76);
-}
-
-.app-flow,
-.game-note {
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  gap: 16px;
-
-  flex-wrap: wrap;
-
-  margin-top: 32px;
-  padding: 18px;
-
-  border-radius: 18px;
-
-  border: 1px solid rgba(255,255,255,.1);
-
-  color: rgba(255,255,255,.62);
-
-  font-size: 12px;
-  font-weight: 800;
-
-  letter-spacing: .12em;
-}
-
-/* =========================================================
-   GAME LAB
-   ========================================================= */
-
-.games-section {
-  background:
-    linear-gradient(
-      180deg,
-      #080a16,
-      #111026
-    );
-
-  color: #fff;
-}
-
-.game-grid {
-  display: grid;
-
-  grid-template-columns: repeat(2, 1fr);
-
-  gap: 22px;
-}
-
-.game-card {
-  display: grid;
-
-  grid-template-columns: 150px 1fr;
-
-  min-height: 270px;
-
-  overflow: hidden;
-
-  border: 1px solid rgba(255,255,255,.1);
-
-  border-radius: 26px;
-
-  background: rgba(255,255,255,.045);
-}
-
-.game-logo {
-  display: grid;
-  place-items: center;
-
-  padding: 22px;
-
-  background:
-    radial-gradient(
-      circle at center,
-      rgba(139,92,246,.25),
-      transparent 65%
-    );
-}
-
-.game-logo img {
-  max-width: 105px;
-  max-height: 105px;
-}
-
-.game-body {
-  padding: 28px;
-}
-
-.game-meta {
-  display: flex;
-  gap: 12px;
-  color: #aab0ff;
-}
-
-.game-body h3 {
-  font-size: 32px;
-  margin: 10px 0;
-}
-
-.game-body p {
-  color: rgba(255,255,255,.68);
-}
-
-.game-actions {
-  display: flex;
-
-  align-items: center;
-
-  gap: 18px;
-
-  flex-wrap: wrap;
-
-  margin-top: 20px;
-}
-
-.source-link {
-  color: #fff;
-
-  text-decoration: none;
-
-  font-weight: 700;
-}
-
-/* =========================================================
-   RESEARCH
-   ========================================================= */
-
-.research-grid {
-  display: grid;
-
-  grid-template-columns: 2fr 1fr 1fr;
-
-  gap: 18px;
-}
-
-.research-main {
-  grid-row: span 2;
-
-  min-height: 440px;
-}
-
-.mini-card {
-  padding: 26px;
-
-  border: 1px solid var(--pa-line);
-
-  border-radius: 22px;
-
-  background: rgba(255,255,255,.75);
-}
-
-/* =========================================================
-   EDUCATION
-   ========================================================= */
-
-.edu-grid {
-  display: grid;
-
-  grid-template-columns: repeat(3, 1fr);
-
-  gap: 18px;
-}
-
-.edu-card {
-  padding: 28px;
-
-  border: 1px solid var(--pa-line);
-
-  border-radius: 22px;
-
-  background: rgba(255,255,255,.75);
-}
-
-/* =========================================================
-   ANALYTICS
-   ========================================================= */
-
-.visitor-counter {
-  display: flex;
-
-  flex-direction: column;
-
-  align-items: center;
-
-  gap: 16px;
-
-  margin: 24px auto 0;
-}
-
-.visitor-counter img {
-  max-width: 100%;
-  height: auto;
-}
-
-.visitor-counter a {
-  font-weight: 800;
-  text-decoration: none;
-}
-
-/* =========================================================
-   RESPONSIVE
-   ========================================================= */
-
-@media (max-width: 900px) {
-
-  .app-launch-grid,
-  .edu-grid,
-  .game-grid,
-  .research-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .research-main {
-    grid-row: auto;
-  }
-
-  .game-card {
-    grid-template-columns: 1fr;
-  }
-
-}
-
-@media (max-width: 650px) {
-
-  .contact-card h2 {
-    font-size: 32px;
-  }
-
-}
-
-@media (prefers-reduced-motion: reduce) {
-
-  html {
-    scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
-    animation: none !important;
-    transition: none !important;
-  }
-
-}
-
-</style>
-
+  <meta charset="utf-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <meta
+    name="description"
+    content="Shubham Kumar Jha — Data Analyst, Python Developer and Aspiring Data Scientist. Analytics, BI, scientific computing, machine learning and interactive projects."
+  >
+
+  <meta
+    name="author"
+    content="Shubham Kumar Jha"
+  >
+
+  <link
+    rel="canonical"
+    href="https://shubham-k-jha.github.io/"
+  >
+
+  <meta
+    property="og:type"
+    content="website"
+  >
+
+  <meta
+    property="og:title"
+    content="Shubham Jha | Data • Research • Build"
+  >
+
+  <meta
+    property="og:description"
+    content="Data analytics, machine learning, scientific computing and interactive projects."
+  >
+
+  <meta
+    property="og:url"
+    content="https://shubham-k-jha.github.io/"
+  >
+
+  <meta
+    property="og:image"
+    content="https://shubham-k-jha.github.io/assets/og-card.svg"
+  >
+
+  <meta
+    name="theme-color"
+    content="#050b15"
+  >
+
+  <title>Shubham Jha | Data • Research • Build</title>
+
+  <link
+    rel="icon"
+    href="assets/favicon.svg"
+    type="image/svg+xml"
+  >
+
+  <!-- Fonts -->
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- ONLY external stylesheet -->
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
 </head>
+
 
 <body>
 
-<!-- =========================================================
-     SCROLL PROGRESS
-     ========================================================= -->
+  <!-- =====================================================
+       SCROLL PROGRESS
+       ===================================================== -->
 
-<div class="scroll-progress" id="scrollProgress"></div>
+  <div
+    class="scroll-progress"
+    id="scrollProgress"
+  ></div>
 
-<div class="ambient a1"></div>
-<div class="ambient a2"></div>
-<div class="ambient a3"></div>
 
+  <!-- =====================================================
+       AMBIENT BACKGROUND
+       ===================================================== -->
 
-<!-- =========================================================
-     HEADER
-     ========================================================= -->
+  <div class="ambient a1"></div>
+  <div class="ambient a2"></div>
+  <div class="ambient a3"></div>
 
-<header class="site-header" id="top">
 
-<nav class="nav shell">
+  <!-- =====================================================
+       HEADER
+       ===================================================== -->
 
-<a class="brand" href="#home">
-  <span>S</span>J
-</a>
+  <header
+    class="site-header"
+    id="top"
+  >
 
-<button
-  class="menu-toggle"
-  id="menuToggle"
-  aria-expanded="false"
-  aria-label="Open menu"
->
-  <span></span>
-  <span></span>
-  <span></span>
-</button>
+    <nav class="nav shell">
 
-<div class="nav-links" id="navLinks">
+      <a
+        class="brand"
+        href="#home"
+        aria-label="Shubham Kumar Jha home"
+      >
+        <span>S</span>J
+      </a>
 
-<a href="#about">About</a>
 
-<a href="#skills">Skills</a>
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-expanded="false"
+        aria-label="Open navigation menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-<a href="#projects">Projects</a>
 
-<a href="#apps">Apps</a>
+      <div
+        class="nav-links"
+        id="navLinks"
+      >
 
-<a class="games-nav" href="#games">
-  🎮 Games
-</a>
+        <a href="#about">About</a>
 
-<a href="#experience">
-  Experience
-</a>
+        <a href="#skills">Skills</a>
 
-<a href="#research">
-  Research
-</a>
+        <a href="#projects">Projects</a>
 
-<a href="#analytics">
-  Analytics
-</a>
+        <a
+          class="games-nav"
+          href="#games"
+        >
+          🎮 Games
+        </a>
 
-<a href="#contact">
-  Contact
-</a>
+        <a href="#apps">Apps</a>
 
-<a
-  class="nav-icon"
-  href="https://github.com/shubham-k-jha"
-  target="_blank"
-  rel="noopener"
->
-  GH ↗
-</a>
+        <a href="#experience">Experience</a>
 
-<button
-  class="theme-toggle"
-  id="themeToggle"
-  type="button"
-  aria-label="Switch to light mode"
->
-  ☾
-</button>
+        <a href="#research">Research</a>
 
-</div>
+        <a href="#analytics">Analytics</a>
 
-</nav>
+        <a href="#contact">Contact</a>
 
-</header>
+        <a
+          class="nav-icon"
+          href="https://github.com/shubham-k-jha"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GH ↗
+        </a>
 
+        <button
+          class="theme-toggle"
+          id="themeToggle"
+          type="button"
+          aria-label="Switch theme"
+        >
+          ☾
+        </button>
 
-<!-- =========================================================
-     MAIN
-     ========================================================= -->
+      </div>
 
-<main>
+    </nav>
 
+  </header>
 
-<!-- =========================================================
-     HERO
-     ========================================================= -->
 
-<section class="hero shell" id="home">
+  <!-- =====================================================
+       MAIN
+       ===================================================== -->
 
-<div class="hero-copy reveal">
+  <main>
 
-<div class="eyebrow">
-  <span class="dot"></span>
-  RESEARCH → DATA ANALYTICS → DATA SCIENCE
-</div>
 
-<h1>
-  Build with data.<br>
-  <em>Think scientifically.</em><br>
-  Ship useful things.
-</h1>
+    <!-- ===================================================
+         HERO
+         =================================================== -->
 
-<p class="hero-lead">
+    <section
+      class="hero shell"
+      id="home"
+    >
 
-I’m <b>Shubham Kumar Jha</b> —
-a Data Analyst and Python developer with
-a quantitative research background.
+      <div class="hero-copy reveal">
 
-I work across Python, SQL, statistics,
-BI, machine learning and scientific data.
+        <div class="eyebrow">
 
-</p>
+          <span class="dot"></span>
 
-<div class="hero-actions">
+          RESEARCH → DATA ANALYTICS → DATA SCIENCE
 
-<a class="btn primary" href="#projects">
-  Explore projects <span>↘</span>
-</a>
+        </div>
 
-<a
-  class="btn outline"
-  href="assets/Shubham_Kumar_Jha_CV.pdf"
-  download
->
-  View CV <span>↓</span>
-</a>
 
-<a class="btn game-btn" href="#apps">
-  🚀 Live Apps
-</a>
+        <h1>
+          Build with data.
+          <br>
 
-<a class="btn game-btn" href="#games">
-  🎮 Game Lab
-</a>
+          <em>Think scientifically.</em>
 
-</div>
+          <br>
 
-<div class="hero-links">
+          Ship useful things.
+        </h1>
 
-<a
-  href="https://github.com/shubham-k-jha"
-  target="_blank"
-  rel="noopener"
->
-  GitHub
-</a>
 
-<a
-  href="https://www.linkedin.com/in/shubhamkjha-datascience"
-  target="_blank"
-  rel="noopener"
->
-  LinkedIn
-</a>
+        <p class="hero-lead">
 
-<a href="mailto:shubhamkjha.ds@gmail.com">
-  Professional Email
-</a>
+          I’m <b>Shubham Kumar Jha</b> —
+          a Data Analyst and Python developer
+          with a quantitative research background.
 
-</div>
+          I work across Python, SQL, statistics,
+          BI, machine learning and scientific data.
 
-</div>
+        </p>
 
 
-<div class="hero-visual reveal delay-1">
+        <div class="hero-actions">
 
-<div class="visual-grid"></div>
+          <a
+            class="btn primary"
+            href="#projects"
+          >
+            Explore projects
+            <span>↘</span>
+          </a>
 
-<div class="hero-orb"></div>
 
-<div class="orbit o1"></div>
-<div class="orbit o2"></div>
-<div class="orbit o3"></div>
+          <a
+            class="btn outline"
+            href="assets/Shubham_Kumar_Jha_CV.pdf"
+            target="_blank"
+            rel="noopener"
+          >
+            View CV
+            <span>↗</span>
+          </a>
 
-<div class="float-card f1">
-  <b>🐍 Python</b>
-  <small>Analysis · ML · Automation</small>
-</div>
 
-<div class="float-card f2">
-  <b>🗄️ SQL</b>
-  <small>Queries · Modelling · Insights</small>
-</div>
+          <a
+            class="btn game-btn"
+            href="#apps"
+          >
+            🚀 Live Apps
+          </a>
 
-<div class="float-card f3">
-  <b>📊 Power BI</b>
-  <small>KPI · Dashboards · BI</small>
-</div>
 
-<div class="float-card f4">
-  <b>🤖 ML</b>
-  <small>Models · Validation · SHAP</small>
-</div>
+          <a
+            class="btn game-btn"
+            href="#games"
+          >
+            🎮 Game Lab
+          </a>
 
-<div class="hero-code">
-  <span>01</span>
-  DATA → INSIGHT → DECISION
-</div>
+        </div>
 
-</div>
 
-</section>
+        <div class="hero-links">
 
+          <a
+            href="https://github.com/shubham-k-jha"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
 
-<!-- =========================================================
-     STATS
-     ========================================================= -->
+          <a
+            href="https://www.linkedin.com/in/shubhamkjha-datascience"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
 
-<section class="stats shell reveal">
+          <a href="mailto:shubhamkjha.ds@gmail.com">
+            Professional Email
+          </a>
 
-<div>
-  <b>4+</b>
-  <span>Years research experience</span>
-</div>
+        </div>
 
-<div>
-  <b>525K+</b>
-  <span>Transaction rows analysed</span>
-</div>
+      </div>
 
-<div>
-  <b>8.4K+</b>
-  <span>Retail order lines</span>
-</div>
 
-<div>
-  <b>0.8448</b>
-  <span>ROC-AUC benchmark</span>
-</div>
+      <!-- HERO VISUAL -->
 
-</section>
+      <div class="hero-visual reveal delay-1">
 
+        <div class="visual-grid"></div>
 
-<!-- =========================================================
-     ABOUT
-     ========================================================= -->
+        <div class="hero-orb"></div>
 
-<section class="section shell" id="about">
+        <div class="orbit o1"></div>
+        <div class="orbit o2"></div>
+        <div class="orbit o3"></div>
 
-<div class="section-head reveal">
 
-<span>01 / ABOUT</span>
+        <div class="float-card f1">
 
-<h2>
-  Research mindset.<br>
-  Data-first execution.
-</h2>
+          <b>🐍 Python</b>
 
-</div>
+          <small>
+            Analysis · ML · Automation
+          </small>
 
+        </div>
 
-<div class="about-grid">
 
-<div class="about-copy reveal">
+        <div class="float-card f2">
 
-<p class="big-copy">
+          <b>🗄️ SQL</b>
 
-My background in Physics taught me to work with
-<b>large, noisy, multidimensional datasets</b>,
-validate assumptions and communicate quantitative
-results clearly.
+          <small>
+            Queries · Modelling · Insights
+          </small>
 
-</p>
+        </div>
 
-<p>
 
-I’m carrying that mindset into business analytics,
-BI and data science:
+        <div class="float-card f3">
 
-define the question,
-clean the data,
-test the assumption,
-visualise the pattern
-and explain what matters.
+          <b>📊 Power BI</b>
 
-</p>
+          <small>
+            KPI · Dashboards · BI
+          </small>
 
-<div class="journey">
+        </div>
 
-<span>PHYSICS & RESEARCH</span>
 
-<i>→</i>
+        <div class="float-card f4">
 
-<span>SCIENTIFIC DATA</span>
+          <b>🤖 ML</b>
 
-<i>→</i>
+          <small>
+            Models · Validation · SHAP
+          </small>
 
-<span>PYTHON + SQL</span>
+        </div>
 
-<i>→</i>
 
-<span>ANALYTICS + BI</span>
+        <div class="hero-code">
 
-<i>→</i>
+          <span>01</span>
 
-<span>DATA SCIENCE</span>
+          DATA → INSIGHT → DECISION
 
-</div>
+        </div>
 
-</div>
+      </div>
 
+    </section>
 
-<div class="principles reveal delay-1">
 
-<div>
+    <!-- ===================================================
+         STATS
+         =================================================== -->
 
-<span>01</span>
+    <section class="stats shell reveal">
 
-<div>
+      <div>
+        <b>4+</b>
+        <span>Years research experience</span>
+      </div>
 
-<b>Question first</b>
+      <div>
+        <b>525K+</b>
+        <span>Transaction rows analysed</span>
+      </div>
 
-<p>
-Turn ambiguous problems into measurable
-analytical questions.
-</p>
+      <div>
+        <b>8.4K+</b>
+        <span>Retail order lines</span>
+      </div>
 
-</div>
+      <div>
+        <b>0.8448</b>
+        <span>ROC-AUC benchmark</span>
+      </div>
 
-</div>
+    </section>
 
 
-<div>
+    <!-- ===================================================
+         ABOUT
+         =================================================== -->
 
-<span>02</span>
+    <section
+      class="section shell"
+      id="about"
+    >
 
-<div>
+      <div class="section-head reveal">
 
-<b>Validate the data</b>
+        <span>01 / ABOUT</span>
 
-<p>
-Clean, check and cross-validate before
-trusting an output.
-</p>
+        <h2>
+          Research mindset.
+          <br>
+          Data-first execution.
+        </h2>
 
-</div>
+      </div>
 
-</div>
 
+      <div class="about-grid">
 
-<div>
 
-<span>03</span>
+        <div class="about-copy reveal">
 
-<div>
+          <p class="big-copy">
 
-<b>Explain the result</b>
+            My background in Physics taught me to work with
+            <b>large, noisy, multidimensional datasets</b>,
+            validate assumptions and communicate quantitative
+            results clearly.
 
-<p>
-Use visuals and clear language for technical
-and non-technical audiences.
-</p>
+          </p>
 
-</div>
 
-</div>
+          <p>
 
-</div>
+            I’m carrying that mindset into business analytics,
+            BI and data science: define the question, clean
+            the data, test the assumption, visualise the pattern
+            and explain what matters.
 
-</div>
+          </p>
 
-</section>
 
+          <div class="journey">
 
-<!-- =========================================================
-     SKILLS
-     ========================================================= -->
+            <span>PHYSICS & RESEARCH</span>
 
-<section class="section tinted" id="skills">
+            <i>→</i>
 
-<div class="shell">
+            <span>SCIENTIFIC DATA</span>
 
-<div class="section-head reveal">
+            <i>→</i>
 
-<span>02 / SKILLS</span>
+            <span>PYTHON + SQL</span>
 
-<h2>
-  Tools I actually use.
-</h2>
+            <i>→</i>
 
-<p>
-Focused on practical analytics, BI, ML
-and scientific computing.
-</p>
+            <span>ANALYTICS + BI</span>
 
-</div>
+            <i>→</i>
 
+            <span>DATA SCIENCE</span>
 
-<div class="skill-grid">
+          </div>
 
+        </div>
 
-<article class="skill-card reveal">
 
-<div class="skill-icon blue">
-  🐍
-</div>
+        <div class="principles reveal delay-1">
 
-<h3>
-  Python & Data
-</h3>
+          <div>
 
-<p>
-Analysis, cleaning, EDA and scientific workflows.
-</p>
+            <span>01</span>
 
-<div class="chips">
+            <div>
 
-<span>Python</span>
-<span>Pandas</span>
-<span>NumPy</span>
-<span>SciPy</span>
-<span>PySpark</span>
+              <b>Question first</b>
 
-</div>
+              <p>
+                Turn ambiguous problems into measurable
+                analytical questions.
+              </p>
 
-</article>
+            </div>
 
+          </div>
 
-<article class="skill-card reveal delay-1">
 
-<div class="skill-icon teal">
-  🗄️
-</div>
+          <div>
 
-<h3>
-  SQL & Databases
-</h3>
+            <span>02</span>
 
-<p>
-Business questions, joins and analytical modelling.
-</p>
+            <div>
 
-<div class="chips">
+              <b>Validate the data</b>
 
-<span>SQL</span>
-<span>MySQL</span>
-<span>PostgreSQL</span>
-<span>SQLite</span>
-<span>CTEs</span>
-<span>Window Functions</span>
+              <p>
+                Clean, check and cross-validate before
+                trusting an output.
+              </p>
 
-</div>
+            </div>
 
-</article>
+          </div>
 
 
-<article class="skill-card reveal delay-2">
+          <div>
 
-<div class="skill-icon orange">
-  📊
-</div>
+            <span>03</span>
 
-<h3>
-  BI & Visualisation
-</h3>
+            <div>
 
-<p>
-Decision-ready dashboards and visual storytelling.
-</p>
+              <b>Explain the result</b>
 
-<div class="chips">
+              <p>
+                Use visuals and clear language for technical
+                and non-technical audiences.
+              </p>
 
-<span>Power BI</span>
-<span>DAX</span>
-<span>Excel</span>
-<span>Matplotlib</span>
-<span>Seaborn</span>
-<span>Plotly</span>
+            </div>
 
-</div>
+          </div>
 
-</article>
+        </div>
 
+      </div>
 
-<article class="skill-card reveal">
+    </section>
 
-<div class="skill-icon purple">
-  🤖
-</div>
 
-<h3>
-  Machine Learning
-</h3>
+    <!-- ===================================================
+         SKILLS
+         =================================================== -->
 
-<p>
-Predictive modelling with validation and interpretation.
-</p>
+    <section
+      class="section tinted"
+      id="skills"
+    >
 
-<div class="chips">
+      <div class="shell">
 
-<span>Scikit-learn</span>
-<span>XGBoost</span>
-<span>Classification</span>
-<span>Regression</span>
-<span>SHAP</span>
+        <div class="section-head reveal">
 
-</div>
+          <span>02 / SKILLS</span>
 
-</article>
+          <h2>
+            Tools I actually use.
+          </h2>
 
+          <p>
+            Focused on practical analytics, BI,
+            ML and scientific computing.
+          </p>
 
-<article class="skill-card reveal delay-1">
+        </div>
 
-<div class="skill-icon pink">
-  📈
-</div>
 
-<h3>
-  Statistics
-</h3>
+        <div class="skill-grid">
 
-<p>
-Evidence-based analysis rather than dashboard decoration.
-</p>
 
-<div class="chips">
+          <article class="skill-card reveal">
 
-<span>Hypothesis Testing</span>
-<span>A/B Testing</span>
-<span>Inference</span>
-<span>Time Series</span>
-<span>Anomaly Detection</span>
+            <div class="skill-icon blue">
+              🐍
+            </div>
 
-</div>
+            <h3>
+              Python & Data
+            </h3>
 
-</article>
+            <p>
+              Analysis, cleaning, EDA and scientific workflows.
+            </p>
 
+            <div class="chips">
 
-<article class="skill-card reveal delay-2">
+              <span>Python</span>
+              <span>Pandas</span>
+              <span>NumPy</span>
+              <span>SciPy</span>
+              <span>PySpark</span>
 
-<div class="skill-icon cyan">
-  ☁️
-</div>
+            </div>
 
-<h3>
-  Tools & Cloud
-</h3>
+          </article>
 
-<p>
-Reproducible development and lightweight deployment.
-</p>
 
-<div class="chips">
+          <article class="skill-card reveal delay-1">
 
-<span>Git</span>
-<span>GitHub</span>
-<span>Streamlit</span>
-<span>Linux</span>
-<span>AWS Fundamentals</span>
-<span>Google Analytics</span>
+            <div class="skill-icon teal">
+              🗄️
+            </div>
 
-</div>
+            <h3>
+              SQL & Databases
+            </h3>
 
-</article>
+            <p>
+              Business questions, joins and analytical modelling.
+            </p>
 
-</div>
+            <div class="chips">
 
-</div>
+              <span>SQL</span>
+              <span>MySQL</span>
+              <span>PostgreSQL</span>
+              <span>SQLite</span>
+              <span>CTEs</span>
+              <span>Window Functions</span>
 
-</section>
+            </div>
 
+          </article>
 
-<!-- =========================================================
-     PROJECTS
-     ========================================================= -->
 
-<section class="section shell" id="projects">
+          <article class="skill-card reveal delay-2">
 
-<div class="section-head reveal">
+            <div class="skill-icon orange">
+              📊
+            </div>
 
-<span>03 / PROJECTS</span>
+            <h3>
+              BI & Visualisation
+            </h3>
 
-<h2>
-  Selected work.
-</h2>
+            <p>
+              Decision-ready dashboards and visual storytelling.
+            </p>
 
-<p>
-Business analytics, customer modelling
-and scientific machine learning.
-</p>
+            <div class="chips">
 
-</div>
+              <span>Power BI</span>
+              <span>DAX</span>
+              <span>Tableau</span>
+              <span>Excel</span>
+              <span>Matplotlib</span>
+              <span>Seaborn</span>
+              <span>Plotly</span>
 
+            </div>
 
-<!-- PROJECT FILTERS -->
+          </article>
 
-<div class="filter-row reveal">
 
-<button class="filter active" data-filter="all">
-  All
-</button>
+          <article class="skill-card reveal">
 
-<button class="filter" data-filter="analytics">
-  📊 Analytics
-</button>
+            <div class="skill-icon purple">
+              🤖
+            </div>
 
-<button class="filter" data-filter="ml">
-  🤖 ML
-</button>
+            <h3>
+              Machine Learning
+            </h3>
 
-<button class="filter" data-filter="research">
-  🔬 Research
-</button>
+            <p>
+              Predictive modelling with validation
+              and interpretation.
+            </p>
 
-</div>
+            <div class="chips">
 
+              <span>Scikit-learn</span>
+              <span>XGBoost</span>
+              <span>Classification</span>
+              <span>Regression</span>
+              <span>SHAP</span>
 
-<!-- FEATURED PROJECT -->
+            </div>
 
-<article
-  class="project-feature reveal"
-  data-project="analytics"
->
+          </article>
 
-<div>
 
-<span class="project-tag">
-  FEATURED · ANALYTICS + BI
-</span>
+          <article class="skill-card reveal delay-1">
 
-<h3>
-  Superstore Sales, Profitability & Margin Analysis
-</h3>
+            <div class="skill-icon pink">
+              📈
+            </div>
 
-<p>
+            <h3>
+              Statistics
+            </h3>
 
-End-to-end retail analytics across
-<b>8,399 order lines</b> and
-<b>5,496 orders</b>,
+            <p>
+              Evidence-based analysis rather than
+              dashboard decoration.
+            </p>
 
-covering cleaning, star-schema modelling,
-SQL analysis and BI reporting.
+            <div class="chips">
 
-</p>
+              <span>Hypothesis Testing</span>
+              <span>A/B Testing</span>
+              <span>Inference</span>
+              <span>Time Series</span>
+              <span>Anomaly Detection</span>
 
+            </div>
 
-<div class="findings">
+          </article>
 
-<div>
-  <b>50.8%</b>
-  <small>loss-making order lines</small>
-</div>
 
-<div>
-  <b>10.2%</b>
-  <small>overall profit margin</small>
-</div>
+          <article class="skill-card reveal delay-2">
 
-<div>
-  <b>8</b>
-  <small>business questions</small>
-</div>
+            <div class="skill-icon cyan">
+              ☁️
+            </div>
 
-</div>
+            <h3>
+              Tools & Cloud
+            </h3>
 
+            <p>
+              Reproducible development and lightweight deployment.
+            </p>
 
-<a
-  class="btn primary"
-  href="https://github.com/shubham-k-jha/superstore-analysis"
-  target="_blank"
-  rel="noopener"
->
-  View project ↗
-</a>
+            <div class="chips">
 
-</div>
+              <span>Git</span>
+              <span>GitHub</span>
+              <span>Streamlit</span>
+              <span>Linux</span>
+              <span>AWS Fundamentals</span>
+              <span>Google Analytics</span>
 
+            </div>
 
-<div class="project-art">
+          </article>
 
-<div class="bars">
 
-<i></i>
-<i></i>
-<i></i>
-<i></i>
-<i></i>
-<i></i>
+        </div>
 
-</div>
+      </div>
 
-<strong>
-  SALES → PROFIT → DECISION
-</strong>
+    </section>
 
-</div>
 
-</article>
+    <!-- ===================================================
+         PROJECTS
+         =================================================== -->
 
+    <section
+      class="section shell"
+      id="projects"
+    >
 
-<!-- PROJECT GRID -->
+      <div class="section-head reveal">
 
-<div class="project-grid">
+        <span>03 / PROJECTS</span>
 
+        <h2>
+          Selected work.
+        </h2>
 
-<article
-  class="project-card reveal"
-  data-project="analytics ml"
->
+        <p>
+          Business analytics, customer modelling
+          and scientific machine learning.
+        </p>
 
-<span>
-  02 · ANALYTICS + ML
-</span>
+      </div>
 
-<h3>
-  UCI Online Retail II
-</h3>
 
-<p>
-Customer analytics and cancellation prediction
-across 525,461 raw transaction rows.
-</p>
+      <!-- PROJECT FILTERS -->
 
-<div class="metric">
+      <div class="filter-row reveal">
 
-<b>0.8448</b>
+        <button
+          class="filter active"
+          data-filter="all"
+          type="button"
+        >
+          All
+        </button>
 
-<small>
-  ROC-AUC
-</small>
+        <button
+          class="filter"
+          data-filter="analytics"
+          type="button"
+        >
+          📊 Analytics
+        </button>
 
-</div>
+        <button
+          class="filter"
+          data-filter="ml"
+          type="button"
+        >
+          🤖 ML
+        </button>
 
-<div class="chips">
+        <button
+          class="filter"
+          data-filter="research"
+          type="button"
+        >
+          🔬 Research
+        </button>
 
-<span>Python</span>
-<span>Pandas</span>
-<span>Scikit-learn</span>
+      </div>
 
-</div>
 
-<a
-  href="https://github.com/shubham-k-jha/online-retail-analytics"
-  target="_blank"
-  rel="noopener"
->
-  Repository ↗
-</a>
+      <!-- FEATURED PROJECT -->
 
-</article>
+      <article
+        class="project-feature reveal"
+        data-project="analytics"
+      >
 
+        <div>
 
-<article
-  class="project-card reveal delay-1"
-  data-project="research ml"
->
+          <span class="project-tag">
+            FEATURED · ANALYTICS + BI
+          </span>
 
-<span>
-  03 · SCIENTIFIC ML
-</span>
 
-<h3>
-  Solar Active-Region ML Benchmark
-</h3>
+          <h3>
+            Superstore Sales,
+            Profitability & Margin Analysis
+          </h3>
 
-<p>
-Reproducible benchmark for flare-productivity
-classification and regression.
-</p>
 
-<div class="metric purple-metric">
+          <p>
 
-<b>XGBoost</b>
+            End-to-end retail analytics across
+            <b>8,399 order lines</b> and
+            <b>5,496 orders</b>, covering cleaning,
+            star-schema modelling, SQL analysis
+            and BI reporting.
 
-<small>
-  with SHAP interpretation
-</small>
+          </p>
 
-</div>
 
-<div class="chips">
+          <div class="findings">
 
-<span>Python</span>
-<span>XGBoost</span>
-<span>SHAP</span>
+            <div>
 
-</div>
+              <b>50.8%</b>
 
-<a
-  href="https://github.com/shubham-k-jha/solar-ar-kutsenko-ml"
-  target="_blank"
-  rel="noopener"
->
-  Repository ↗
-</a>
+              <small>
+                loss-making order lines
+              </small>
 
-</article>
+            </div>
 
 
-<article
-  class="project-card reveal"
-  data-project="analytics"
->
+            <div>
 
-<span>
-  04 · ANALYTICS + SQL
-</span>
+              <b>10.2%</b>
 
-<h3>
-  E-Commerce Sales Analysis
-</h3>
+              <small>
+                overall profit margin
+              </small>
 
-<p>
-Transactional analysis using SQL and Python
-to turn order data into business insights.
-</p>
+            </div>
 
-<div class="metric teal-metric">
 
-<b>SQL</b>
+            <div>
 
-<small>
-  joins · CTEs · windows
-</small>
+              <b>8</b>
 
-</div>
+              <small>
+                business questions
+              </small>
 
-<div class="chips">
+            </div>
 
-<span>SQL</span>
-<span>Python</span>
-<span>Pandas</span>
+          </div>
 
-</div>
 
-<a
-  href="https://github.com/shubham-k-jha/ecommerce-sales-analysis"
-  target="_blank"
-  rel="noopener"
->
-  Repository ↗
-</a>
+          <a
+            class="btn primary"
+            href="https://github.com/shubham-k-jha/superstore-analysis"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View project ↗
+          </a>
 
-</article>
+        </div>
 
-</div>
 
-</section>
+        <div class="project-art">
 
+          <div class="bars">
 
-<!-- =========================================================
-     LIVE APPS
-     ========================================================= -->
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
 
-<section
-  class="section apps-section"
-  id="apps"
->
+          </div>
 
-<div class="shell">
+          <strong>
+            SALES → PROFIT → DECISION
+          </strong>
 
-<div class="section-head reveal">
+        </div>
 
-<span>
-  04 / LIVE APPS
-</span>
+      </article>
 
-<h2>
-  Don't just read it.<br>
-  Try it.
-</h2>
 
-<p>
-Interactive applications deployed from my projects.
-</p>
+      <!-- PROJECT GRID -->
 
-</div>
+      <div class="project-grid">
 
 
-<div class="app-launch-grid">
+        <article
+          class="project-card reveal"
+          data-project="analytics ml"
+        >
 
+          <span>
+            02 · ANALYTICS + ML
+          </span>
 
-<!-- FINANCE -->
 
-<article class="app-card reveal">
+          <h3>
+            UCI Online Retail II
+          </h3>
 
-<div class="app-top">
 
-<span class="app-logo">
-  ₹
-</span>
+          <p>
+            Customer analytics and cancellation
+            prediction across 525,461 raw
+            transaction rows.
+          </p>
 
-<span class="live-dot">
-  ● LIVE
-</span>
 
-</div>
+          <div class="metric">
 
-<span class="app-kicker">
-  STREAMLIT · PLOTLY
-</span>
+            <b>0.8448</b>
 
-<h3>
-  Finance Calculator
-</h3>
+            <small>
+              ROC-AUC
+            </small>
 
-<p>
-Interactive finance calculations presented
-through a dashboard-style interface.
-</p>
+          </div>
 
-<div class="app-tags">
 
-<span>Finance</span>
-<span>Streamlit</span>
-<span>Plotly</span>
+          <div class="chips">
 
-</div>
+            <span>Python</span>
+            <span>Pandas</span>
+            <span>Scikit-learn</span>
 
-<a
-  class="btn primary"
-  href="https://finance-calc-app.streamlit.app/"
-  target="_blank"
-  rel="noopener"
->
-  Launch app ↗
-</a>
+          </div>
 
-</article>
 
+          <a
+            href="https://github.com/shubham-k-jha/online-retail-analytics"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Repository ↗
+          </a>
 
-<!-- ATS -->
+        </article>
 
-<article class="app-card reveal delay-1">
 
-<div class="app-top">
+        <article
+          class="project-card reveal delay-1"
+          data-project="research ml"
+        >
 
-<span class="app-logo">
-  ATS
-</span>
+          <span>
+            03 · SCIENTIFIC ML
+          </span>
 
-<span class="live-dot">
-  ● LIVE
-</span>
 
-</div>
+          <h3>
+            Solar Active-Region ML Benchmark
+          </h3>
 
-<span class="app-kicker">
-  STREAMLIT · RESUME ANALYTICS
-</span>
 
-<h3>
-  ATS Resume Screener
-</h3>
+          <p>
+            Reproducible benchmark for flare-productivity
+            classification and regression.
+          </p>
 
-<p>
-Interactive resume screening workflow focused
-on role matching and ATS-style analysis.
-</p>
 
-<div class="app-tags">
+          <div class="metric purple-metric">
 
-<span>Resume</span>
-<span>ATS</span>
-<span>Analytics</span>
+            <b>XGBoost</b>
 
-</div>
+            <small>
+              with SHAP interpretation
+            </small>
 
-<a
-  class="btn primary"
-  href="https://ats--resume-screener.streamlit.app/"
-  target="_blank"
-  rel="noopener"
->
-  Launch app ↗
-</a>
+          </div>
 
-</article>
 
+          <div class="chips">
 
-<!-- JOB AGENT -->
+            <span>Python</span>
+            <span>XGBoost</span>
+            <span>SHAP</span>
 
-<article class="app-card reveal delay-2">
+          </div>
 
-<div class="app-top">
 
-<span class="app-logo">
-  AI
-</span>
+          <a
+            href="https://github.com/shubham-k-jha/solar-ar-kutsenko-ml"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Repository ↗
+          </a>
 
-<span class="live-dot">
-  ● LIVE
-</span>
+        </article>
 
-</div>
 
-<span class="app-kicker">
-  STREAMLIT · AUTOMATION
-</span>
+        <article
+          class="project-card reveal"
+          data-project="analytics"
+        >
 
-<h3>
-  Job Agent
-</h3>
+          <span>
+            04 · ANALYTICS + SQL
+          </span>
 
-<p>
-Interactive job discovery and matching workflow
-built as a practical automation project.
-</p>
 
-<div class="app-tags">
+          <h3>
+            E-Commerce Sales Analysis
+          </h3>
 
-<span>Jobs</span>
-<span>Python</span>
-<span>Automation</span>
 
-</div>
+          <p>
+            Transactional analysis using SQL and Python
+            to turn messy order data into business insights.
+          </p>
 
-<a
-  class="btn primary"
-  href="https://job--agent.streamlit.app/"
-  target="_blank"
-  rel="noopener"
->
-  Launch app ↗
-</a>
 
-</article>
+          <div class="metric teal-metric">
 
-</div>
+            <b>SQL</b>
 
+            <small>
+              joins · CTEs · windows
+            </small>
 
-<div class="app-flow reveal">
+          </div>
 
-<span>BUILD</span>
-<i>→</i>
-<span>DEPLOY</span>
-<i>→</i>
-<span>TEST</span>
-<i>→</i>
-<span>IMPROVE</span>
-<i>→</i>
-<span>SHIP</span>
 
-</div>
+          <div class="chips">
 
-</div>
+            <span>SQL</span>
+            <span>Python</span>
+            <span>Pandas</span>
 
-</section>
+          </div>
 
 
-<!-- =========================================================
-     GAMES
-     ========================================================= -->
+          <a
+            href="https://github.com/shubham-k-jha/ecommerce-sales-analysis"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Repository ↗
+          </a>
 
-<section
-  class="section games-section"
-  id="games"
->
+        </article>
 
-<div class="shell">
 
-<div class="section-head reveal">
+      </div>
 
-<span>
-  05 / GAME LAB
-</span>
+    </section>
 
-<h2>
-  Build. Play. Debug.
-</h2>
 
-<p>
-Two browser games I built outside my usual data stack.
-</p>
+    <!-- ===================================================
+         LIVE APPS
+         =================================================== -->
 
-</div>
+    <section
+      class="section apps-section"
+      id="apps"
+    >
 
+      <div class="shell">
 
-<div class="game-grid">
 
+        <div class="section-head reveal">
 
-<!-- NEON PONG -->
+          <span>
+            04 / LIVE APPS
+          </span>
 
-<article class="game-card pong reveal">
+          <h2>
+            Don't just read it.
+            <br>
+            Try it.
+          </h2>
 
-<div class="game-logo">
+          <p>
+            Interactive applications deployed from
+            my projects.
+          </p>
 
-<img
-  src="assets/neon-pong.svg"
-  alt="Neon Pong logo"
->
+        </div>
 
-</div>
 
+        <div class="app-launch-grid">
 
-<div class="game-body">
 
-<div class="game-meta">
+          <!-- FINANCE -->
 
-<span>
-  🏓 ARCADE
-</span>
+          <article class="app-card finance reveal">
 
-<span>
-  JAVASCRIPT
-</span>
+            <div class="app-top">
 
-</div>
+              <span class="app-logo">
+                ₹
+              </span>
 
-<h3>
-  Neon Pong
-</h3>
+              <span class="live-dot">
+                ● LIVE
+              </span>
 
-<p>
-Fast browser Pong with a neon arcade interface,
-scoring and responsive controls.
-</p>
+            </div>
 
 
-<div class="game-actions">
+            <span class="app-kicker">
+              STREAMLIT · PLOTLY
+            </span>
 
-<a
-  class="btn play-pink"
-  href="https://shubham-k-jha.github.io/Neon-Pong"
-  target="_blank"
-  rel="noopener"
->
-  ▶ Play live
-</a>
 
-<a
-  class="source-link"
-  href="https://github.com/shubham-k-jha/pong"
-  target="_blank"
-  rel="noopener"
->
-  GitHub ↗
-</a>
+            <h3>
+              Finance Calculator
+            </h3>
 
-</div>
 
-</div>
+            <p>
+              Interactive finance calculations
+              presented through a dashboard-style
+              interface.
+            </p>
 
-</article>
 
+            <div class="app-tags">
 
-<!-- NEON CHESS -->
+              <span>Finance</span>
+              <span>Streamlit</span>
+              <span>Plotly</span>
 
-<article class="game-card chess reveal delay-1">
+            </div>
 
-<div class="game-logo">
 
-<img
-  src="assets/neon-chess.svg"
-  alt="Neon Chess logo"
->
+            <a
+              class="btn primary"
+              href="https://finance-calc-app.streamlit.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Launch app ↗
+            </a>
 
-</div>
+          </article>
 
 
-<div class="game-body">
+          <!-- ATS -->
 
-<div class="game-meta">
+          <article class="app-card ats reveal delay-1">
 
-<span>
-  ♟️ CHESS
-</span>
+            <div class="app-top">
 
-<span>
-  AI OPPONENT
-</span>
+              <span class="app-logo">
+                ATS
+              </span>
 
-</div>
+              <span class="live-dot">
+                ● LIVE
+              </span>
 
-<h3>
-  Neon Chess
-</h3>
+            </div>
 
-<p>
-Interactive browser chess with an AI opponent
-and a neon visual style.
-</p>
 
+            <span class="app-kicker">
+              STREAMLIT · RESUME ANALYTICS
+            </span>
 
-<div class="game-actions">
 
-<a
-  class="btn play-purple"
-  href="https://shubham-k-jha.github.io/Neon-Chess-Chess-vs-AI/"
-  target="_blank"
-  rel="noopener"
->
-  ▶ Play live
-</a>
+            <h3>
+              ATS Resume Screener
+            </h3>
 
-<a
-  class="source-link"
-  href="https://github.com/shubham-k-jha/Neon-Chess-Chess-vs-AI"
-  target="_blank"
-  rel="noopener"
->
-  GitHub ↗
-</a>
 
-</div>
+            <p>
+              Interactive resume screening workflow
+              focused on role matching and ATS-style analysis.
+            </p>
 
-</div>
 
-</article>
+            <div class="app-tags">
 
-</div>
+              <span>Resume</span>
+              <span>ATS</span>
+              <span>Analytics</span>
 
+            </div>
 
-<div class="game-note reveal">
 
-<span>🎮</span>
+            <a
+              class="btn primary"
+              href="https://ats--resume-screener.streamlit.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Launch app ↗
+            </a>
 
-<b>
-  Game Lab
-</b>
+          </article>
 
-<span>
-  UI · Logic · Interaction · Debugging · Shipping
-</span>
 
-</div>
+          <!-- JOB AGENT -->
 
-</div>
+          <article class="app-card agent reveal delay-2">
 
-</section>
+            <div class="app-top">
 
+              <span class="app-logo">
+                AI
+              </span>
 
-<!-- =========================================================
-     EXPERIENCE
-     ========================================================= -->
+              <span class="live-dot">
+                ● LIVE
+              </span>
 
-<section
-  class="section dark-section"
-  id="experience"
->
+            </div>
 
-<div class="shell">
 
-<div class="section-head reveal">
+            <span class="app-kicker">
+              STREAMLIT · AUTOMATION
+            </span>
 
-<span>
-  06 / EXPERIENCE
-</span>
 
-<h2>
-  Research experience,<br>
-  reframed through data.
-</h2>
+            <h3>
+              Job Agent
+            </h3>
 
-</div>
 
+            <p>
+              Interactive job discovery and matching
+              workflow built as a practical automation project.
+            </p>
 
-<div class="experience-list">
 
+            <div class="app-tags">
 
-<article class="experience-item reveal">
+              <span>Jobs</span>
+              <span>Python</span>
+              <span>Automation</span>
 
-<div>
+            </div>
 
-<b>
-  Aug '25 — Present
-</b>
 
-<small>
-  NIT Delhi
-</small>
+            <a
+              class="btn primary"
+              href="https://job--agent.streamlit.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Launch app ↗
+            </a>
 
-</div>
+          </article>
 
 
-<div>
+        </div>
 
-<h3>
-  Junior Research Fellow — Data Analytics
-</h3>
 
-<p>
-Analyse multi-instrument observational datasets
-in Python; automate ETL, validation, visualisation
-and reporting; apply EDA, correlation and
-time-series methods.
-</p>
+        <div class="app-flow reveal">
 
-</div>
+          <span>BUILD</span>
 
-</article>
+          <i>→</i>
 
+          <span>DEPLOY</span>
 
-<article class="experience-item reveal">
+          <i>→</i>
 
-<div>
+          <span>TEST</span>
 
-<b>
-  Aug '22 — Apr '25
-</b>
+          <i>→</i>
 
-<small>
-  IIA · Bengaluru
-</small>
+          <span>IMPROVE</span>
 
-</div>
+          <i>→</i>
 
+          <span>SHIP</span>
 
-<div>
+        </div>
 
-<h3>
-  Junior Research Fellow
-</h3>
+      </div>
 
-<p>
-Processed high-volume observational data,
-built reusable Python pipelines, applied
-statistical/trend analysis and automated
-repetitive processing.
-</p>
+    </section>
 
-</div>
 
-</article>
+    <!-- ===================================================
+         GAME LAB
+         =================================================== -->
 
+    <section
+      class="section games-section"
+      id="games"
+    >
 
-</div>
+      <div class="shell">
 
-</div>
 
-</section>
+        <div class="section-head reveal">
 
+          <span>
+            05 / GAME LAB
+          </span>
 
-<!-- =========================================================
-     RESEARCH
-     ========================================================= -->
+          <h2>
+            Build. Play. Debug.
+          </h2>
 
-<section
-  class="section shell"
-  id="research"
->
+          <p>
+            Two browser games I built outside my usual
+            data stack — because good engineering is still engineering.
+          </p>
 
-<div class="section-head reveal">
+        </div>
 
-<span>
-  07 / RESEARCH
-</span>
 
-<h2>
-  Scientific computing<br>
-  is part of the edge.
-</h2>
+        <div class="game-grid">
 
-</div>
 
+          <!-- NEON PONG -->
 
-<div class="research-grid">
+          <article class="game-card pong reveal">
 
+            <div class="game-logo">
 
-<article class="research-main reveal">
+              <img
+                src="assets/neon-pong.svg"
+                alt="Neon Pong logo"
+              >
 
-<div class="solar"></div>
+            </div>
 
-<div>
 
-<span>
-  ☀️ SOLAR DATA
-</span>
+            <div class="game-body">
 
-<h3>
-  Scientific data analysis
-</h3>
+              <div class="game-meta">
 
-<p>
-Solar active-region studies using HMI,
-AIA and GOES data with Python-based processing,
-visualisation and time-series analysis.
-</p>
+                <span>
+                  🏓 ARCADE
+                </span>
 
-</div>
+                <span>
+                  JAVASCRIPT
+                </span>
 
-</article>
+              </div>
 
 
-<article class="mini-card reveal">
+              <h3>
+                Neon Pong
+              </h3>
 
-<b>01</b>
 
-<h3>
-  Complex datasets
-</h3>
+              <p>
+                Fast browser Pong with a neon arcade
+                interface, scoring and responsive controls.
+              </p>
 
-<p>
-High-volume observational data and
-noisy measurements.
-</p>
 
-</article>
+              <div class="game-actions">
 
+                <a
+                  class="btn play-pink"
+                  href="https://shubham-k-jha.github.io/Neon-Pong"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  ▶ Play live
+                </a>
 
-<article class="mini-card reveal delay-1">
 
-<b>02</b>
+                <a
+                  class="source-link"
+                  href="https://github.com/shubham-k-jha/pong"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub ↗
+                </a>
 
-<h3>
-  Validation
-</h3>
+              </div>
 
-<p>
-Independent checks and reproducible
-computational outputs.
-</p>
+            </div>
 
-</article>
+          </article>
 
 
-<article class="mini-card reveal delay-2">
+          <!-- NEON CHESS -->
 
-<b>03</b>
+          <article class="game-card chess reveal delay-1">
 
-<h3>
-  Scientific Python
-</h3>
+            <div class="game-logo">
 
-<p>
-Python, NumPy, SciPy, SunPy, Astropy
-and Linux workflows.
-</p>
+              <img
+                src="assets/neon-chess.svg"
+                alt="Neon Chess logo"
+              >
 
-</article>
+            </div>
 
 
-<article class="mini-card reveal">
+            <div class="game-body">
 
-<b>04</b>
+              <div class="game-meta">
 
-<h3>
-  Communication
-</h3>
+                <span>
+                  ♟️ CHESS
+                </span>
 
-<p>
-Technical findings translated into clear
-visuals and conclusions.
-</p>
+                <span>
+                  AI OPPONENT
+                </span>
 
-</article>
+              </div>
 
 
-</div>
+              <h3>
+                Neon Chess
+              </h3>
 
-</section>
 
+              <p>
+                Interactive browser chess with an AI
+                opponent and a neon visual style.
+              </p>
 
-<!-- =========================================================
-     EDUCATION
-     ========================================================= -->
 
-<section
-  class="section tinted"
-  id="education"
->
+              <div class="game-actions">
 
-<div class="shell">
+                <a
+                  class="btn play-purple"
+                  href="https://shubham-k-jha.github.io/Neon-Chess-Chess-vs-AI/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  ▶ Play live
+                </a>
 
-<div class="section-head reveal">
 
-<span>
-  08 / EDUCATION
-</span>
+                <a
+                  class="source-link"
+                  href="https://github.com/shubham-k-jha/Neon-Chess-Chess-vs-AI"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub ↗
+                </a>
 
-<h2>
-  Academic foundation.
-</h2>
+              </div>
 
-</div>
+            </div>
 
+          </article>
 
-<div class="edu-grid">
 
+        </div>
 
-<article class="edu-card reveal">
 
-<span>
-  2020 — 2022
-</span>
+        <div class="game-note reveal">
 
-<h3>
-  M.Sc. Physics
-</h3>
+          <span>🎮</span>
 
-<p>
-  NIT Manipur
-</p>
+          <b>Game Lab</b>
 
-<b>
-  CGPA 8.62 / 10.0
-</b>
+          <span>
+            UI · Logic · Interaction · Debugging · Shipping
+          </span>
 
-</article>
+        </div>
 
+      </div>
 
-<article class="edu-card reveal delay-1">
+    </section>
 
-<span>
-  2015 — 2018
-</span>
 
-<h3>
-  B.Sc. Physical Science
-</h3>
+    <!-- ===================================================
+         EXPERIENCE
+         =================================================== -->
 
-<p>
-  University of Delhi
-</p>
+    <section
+      class="section dark-section"
+      id="experience"
+    >
 
-<b>
-  CGPA 7.82 / 10.0
-</b>
+      <div class="shell">
 
-</article>
 
+        <div class="section-head reveal">
 
-<article class="edu-card reveal delay-2">
+          <span>
+            06 / EXPERIENCE
+          </span>
 
-<span>
-  Jan 2022
-</span>
+          <h2>
+            Research experience,
+            <br>
+            reframed through data.
+          </h2>
 
-<h3>
-  GATE — Physics
-</h3>
+        </div>
 
-<p>
-  Graduate Aptitude Test in Engineering
-</p>
 
-<b>
-  Qualified 2022
-</b>
+        <div class="experience-list">
 
-</article>
 
+          <article class="experience-item reveal">
 
-</div>
+            <div>
 
-</div>
+              <b>
+                Aug '25 — Present
+              </b>
 
-</section>
+              <small>
+                NIT Delhi
+              </small>
 
+            </div>
 
-<!-- =========================================================
-     PORTFOLIO ANALYTICS
-     ========================================================= -->
 
-<section
-  class="section shell"
-  id="analytics"
->
+            <div>
 
-<div
-  class="contact-card reveal"
-  style="text-align:center;display:block;"
->
+              <h3>
+                Junior Research Fellow —
+                Data Analytics
+              </h3>
 
-<div>
+              <p>
+                Analyse multi-instrument observational
+                datasets in Python; automate ETL,
+                validation, visualisation and reporting;
+                apply EDA, correlation and time-series methods.
+              </p>
 
-<span class="eyebrow">
-  09 / ANALYTICS
-</span>
+            </div>
 
-<h2>
-  Portfolio Analytics
-</h2>
+          </article>
 
-<p>
-  Live portfolio visitor statistics.
-</p>
 
-</div>
+          <article class="experience-item reveal">
 
+            <div>
 
-<div class="visitor-counter">
+              <b>
+                Aug '22 — Apr '25
+              </b>
 
-<img
-  src="https://github-profile-analytics-rho.vercel.app/api/count?username=shubham-k-jha&label=PORTFOLIO%20VIEWS"
-  alt="Portfolio Views"
->
+              <small>
+                IIA · Bengaluru
+              </small>
 
-<a
-  class="btn primary"
-  href="https://github-profile-analytics-rho.vercel.app/dashboard.html"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  📊 View Analytics Dashboard ↗
-</a>
+            </div>
 
-</div>
 
-</div>
+            <div>
 
-</section>
+              <h3>
+                Junior Research Fellow
+              </h3>
 
+              <p>
+                Processed high-volume observational data,
+                built reusable Python pipelines, applied
+                statistical/trend analysis and automated
+                repetitive processing.
+              </p>
 
-<!-- =========================================================
-     CONTACT
-     ========================================================= -->
+            </div>
 
-<section
-  class="section shell"
-  id="contact"
->
+          </article>
 
-<div class="contact-card reveal">
 
-<div>
+        </div>
 
-<span class="eyebrow">
-  10 / CONTACT
-</span>
+      </div>
 
-<h2>
-  Let’s build something useful.
-</h2>
+    </section>
 
-<p>
-For analytics, data science, BI,
-scientific computing or research opportunities.
-</p>
 
-</div>
+    <!-- ===================================================
+         RESEARCH
+         =================================================== -->
 
+    <section
+      class="section shell"
+      id="research"
+    >
 
-<div class="contact-actions">
+      <div class="section-head reveal">
 
-<a
-  class="btn primary"
-  href="mailto:shubhamkjha.ds@gmail.com"
->
-  Professional Email ↗
-</a>
+        <span>
+          07 / RESEARCH
+        </span>
 
-<a
-  class="btn outline light"
-  href="https://www.linkedin.com/in/shubhamkjha-datascience"
-  target="_blank"
-  rel="noopener"
->
-  LinkedIn ↗
-</a>
+        <h2>
+          Scientific computing
+          <br>
+          is part of the edge.
+        </h2>
 
-<a
-  class="btn outline light"
-  href="https://github.com/shubham-k-jha"
-  target="_blank"
-  rel="noopener"
->
-  GitHub ↗
-</a>
+      </div>
 
-</div>
 
-</div>
+      <div class="research-grid">
 
-</section>
 
-</main>
+        <!-- MAIN RESEARCH -->
 
+        <article class="research-main reveal">
 
-<!-- =========================================================
-     FOOTER
-     ========================================================= -->
+          <div class="solar"></div>
 
-<footer>
 
-<div class="shell footer-inner">
+          <div>
 
-<div>
+            <span>
+              ☀️ SOLAR DATA
+            </span>
 
-<b>
-  Shubham Kumar Jha
-</b>
+            <h3>
+              Scientific data analysis
+            </h3>
 
-<span>
-  · Data Analyst | Aspiring Data Scientist
-</span>
+            <p>
+              Solar active-region studies using HMI,
+              AIA and GOES data with Python-based
+              processing, visualisation and time-series analysis.
+            </p>
 
-</div>
+          </div>
 
+        </article>
 
-<div>
 
-<a href="#top">
-  Back to top ↑
-</a>
+        <!-- RESEARCH CARDS -->
 
-<span>
-  © <span id="year"></span>
-</span>
+        <article class="mini-card reveal">
 
-</div>
+          <b>01</b>
 
-</div>
+          <h3>
+            Complex datasets
+          </h3>
 
-</footer>
+          <p>
+            High-volume observational data
+            and noisy measurements.
+          </p>
 
+        </article>
 
-<!-- =========================================================
-     BACK TO TOP
-     ========================================================= -->
 
-<button
-  class="back-top"
-  id="backTop"
-  aria-label="Back to top"
->
-  ↑
-</button>
+        <article class="mini-card reveal delay-1">
 
+          <b>02</b>
 
-<!-- =========================================================
-     INTERACTIONS
-     ========================================================= -->
+          <h3>
+            Validation
+          </h3>
 
-<script>
+          <p>
+            Independent checks and reproducible
+            computational outputs.
+          </p>
 
-document.addEventListener("DOMContentLoaded", () => {
+        </article>
 
-  /* ---------------------------------------------
-     Elements
-     --------------------------------------------- */
 
-  const progress =
-    document.getElementById("scrollProgress");
+        <article class="mini-card reveal delay-2">
 
-  const back =
-    document.getElementById("backTop");
+          <b>03</b>
 
-  const menu =
-    document.getElementById("menuToggle");
+          <h3>
+            Scientific Python
+          </h3>
 
-  const nav =
-    document.getElementById("navLinks");
+          <p>
+            Python, NumPy, SciPy, SunPy,
+            Astropy and Linux workflows.
+          </p>
 
-  const theme =
-    document.getElementById("themeToggle");
+        </article>
 
-  const year =
-    document.getElementById("year");
 
+        <article class="mini-card reveal">
 
-  /* ---------------------------------------------
-     Year
-     --------------------------------------------- */
+          <b>04</b>
 
-  if (year) {
-    year.textContent = new Date().getFullYear();
-  }
+          <h3>
+            Communication
+          </h3>
 
+          <p>
+            Technical findings translated into
+            clear visuals and conclusions.
+          </p>
 
-  /* ---------------------------------------------
-     Scroll progress
-     --------------------------------------------- */
+        </article>
 
-  const updateScroll = () => {
 
-    const max =
-      document.documentElement.scrollHeight -
-      window.innerHeight;
+      </div>
 
-    const percentage =
-      max > 0
-        ? (window.scrollY / max) * 100
-        : 0;
+    </section>
 
-    if (progress) {
-      progress.style.width =
-        percentage + "%";
-    }
 
+    <!-- ===================================================
+         EDUCATION
+         =================================================== -->
 
-    if (back) {
+    <section
+      class="section tinted"
+      id="education"
+    >
 
-      back.classList.toggle(
-        "show",
-        window.scrollY > 600
+      <div class="shell">
+
+
+        <div class="section-head reveal">
+
+          <span>
+            08 / EDUCATION
+          </span>
+
+          <h2>
+            Academic foundation.
+          </h2>
+
+        </div>
+
+
+        <div class="edu-grid">
+
+
+          <article class="edu-card reveal">
+
+            <span>
+              2020 — 2022
+            </span>
+
+            <h3>
+              M.Sc. Physics
+            </h3>
+
+            <p>
+              NIT Manipur
+            </p>
+
+            <b>
+              CGPA 8.62 / 10.0
+            </b>
+
+          </article>
+
+
+          <article class="edu-card reveal delay-1">
+
+            <span>
+              2015 — 2018
+            </span>
+
+            <h3>
+              B.Sc. Physical Science
+            </h3>
+
+            <p>
+              University of Delhi
+            </p>
+
+            <b>
+              CGPA 7.82 / 10.0
+            </b>
+
+          </article>
+
+
+          <article class="edu-card reveal delay-2">
+
+            <span>
+              Jan 2022
+            </span>
+
+            <h3>
+              GATE — Physics
+            </h3>
+
+            <p>
+              Graduate Aptitude Test in Engineering
+            </p>
+
+            <b>
+              Qualified 2022
+            </b>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         PORTFOLIO ANALYTICS
+         =================================================== -->
+
+    <section
+      class="section shell"
+      id="analytics"
+    >
+
+      <div
+        class="contact-card reveal"
+        style="text-align:center;"
+      >
+
+
+        <div>
+
+          <span class="eyebrow">
+            09 / ANALYTICS
+          </span>
+
+          <h2>
+            Portfolio Analytics
+          </h2>
+
+          <p>
+            Live portfolio visitor statistics.
+          </p>
+
+        </div>
+
+
+        <div class="visitor-counter">
+
+
+          <img
+            src="https://github-profile-analytics-rho.vercel.app/api/count?username=shubham-k-jha&label=PORTFOLIO%20VIEWS"
+            alt="Portfolio Views"
+          >
+
+
+          <a
+            class="btn primary"
+            href="https://github-profile-analytics-rho.vercel.app/dashboard.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            📊 View Analytics Dashboard ↗
+          </a>
+
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         CONTACT
+         =================================================== -->
+
+    <section
+      class="section shell"
+      id="contact"
+    >
+
+      <div class="contact-card reveal">
+
+
+        <div>
+
+          <span class="eyebrow">
+            10 / CONTACT
+          </span>
+
+          <h2>
+            Let’s build something useful.
+          </h2>
+
+          <p>
+            For analytics, data science, BI,
+            scientific computing or research opportunities.
+          </p>
+
+        </div>
+
+
+        <div class="contact-actions">
+
+
+          <a
+            class="btn primary"
+            href="mailto:shubhamkjha.ds@gmail.com"
+          >
+            Professional Email ↗
+          </a>
+
+
+          <a
+            class="btn outline light"
+            href="https://www.linkedin.com/in/shubhamkjha-datascience"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn ↗
+          </a>
+
+
+          <a
+            class="btn outline light"
+            href="https://github.com/shubham-k-jha"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub ↗
+          </a>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+
+  <footer>
+
+    <div class="shell footer-inner">
+
+
+      <div>
+
+        <b>
+          Shubham Kumar Jha
+        </b>
+
+        <span>
+          · Data Analyst | Aspiring Data Scientist
+        </span>
+
+      </div>
+
+
+      <div>
+
+        <a href="#top">
+          Back to top ↑
+        </a>
+
+        <span>
+          © <span id="year"></span>
+        </span>
+
+      </div>
+
+
+    </div>
+
+  </footer>
+
+
+  <!-- =====================================================
+       BACK TO TOP
+       ===================================================== -->
+
+  <button
+    class="back-top"
+    id="backTop"
+    type="button"
+    aria-label="Back to top"
+  >
+    ↑
+  </button>
+
+
+  <!-- =====================================================
+       PAGE INTERACTIONS
+       ===================================================== -->
+
+  <script>
+
+    document.addEventListener("DOMContentLoaded", () => {
+
+      /* ---------------------------------------------
+         ELEMENTS
+         --------------------------------------------- */
+
+      const progress =
+        document.getElementById("scrollProgress");
+
+      const back =
+        document.getElementById("backTop");
+
+      const menu =
+        document.getElementById("menuToggle");
+
+      const nav =
+        document.getElementById("navLinks");
+
+      const themeToggle =
+        document.getElementById("themeToggle");
+
+
+      /* ---------------------------------------------
+         YEAR
+         --------------------------------------------- */
+
+      const year =
+        document.getElementById("year");
+
+      if (year) {
+        year.textContent =
+          new Date().getFullYear();
+      }
+
+
+      /* ---------------------------------------------
+         SCROLL PROGRESS
+         --------------------------------------------- */
+
+      const updateScroll = () => {
+
+        const max =
+          document.documentElement.scrollHeight -
+          window.innerHeight;
+
+        const percentage =
+          max > 0
+            ? (window.scrollY / max) * 100
+            : 0;
+
+        if (progress) {
+          progress.style.width =
+            percentage + "%";
+        }
+
+
+        if (back) {
+
+          back.classList.toggle(
+            "show",
+            window.scrollY > 600
+          );
+
+        }
+
+      };
+
+
+      window.addEventListener(
+        "scroll",
+        updateScroll,
+        { passive: true }
       );
 
-    }
 
-  };
-
-
-  window.addEventListener(
-    "scroll",
-    updateScroll,
-    { passive: true }
-  );
-
-  updateScroll();
+      updateScroll();
 
 
-  /* ---------------------------------------------
-     Back to top
-     --------------------------------------------- */
+      /* ---------------------------------------------
+         BACK TO TOP
+         --------------------------------------------- */
 
-  if (back) {
+      if (back) {
 
-    back.addEventListener(
-      "click",
-      () => {
-
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth"
-        });
-
-      }
-    );
-
-  }
-
-
-  /* ---------------------------------------------
-     Mobile menu
-     --------------------------------------------- */
-
-  if (menu && nav) {
-
-    menu.addEventListener(
-      "click",
-      () => {
-
-        const open =
-          menu.getAttribute(
-            "aria-expanded"
-          ) === "true";
-
-        menu.setAttribute(
-          "aria-expanded",
-          String(!open)
-        );
-
-        nav.classList.toggle(
-          "open",
-          !open
-        );
-
-      }
-    );
-
-
-    nav.querySelectorAll("a").forEach(
-      link => {
-
-        link.addEventListener(
+        back.addEventListener(
           "click",
           () => {
 
-            nav.classList.remove("open");
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth"
+            });
+
+          }
+        );
+
+      }
+
+
+      /* ---------------------------------------------
+         MOBILE MENU
+         --------------------------------------------- */
+
+      if (menu && nav) {
+
+        menu.addEventListener(
+          "click",
+          () => {
+
+            const isOpen =
+              menu.getAttribute(
+                "aria-expanded"
+              ) === "true";
+
 
             menu.setAttribute(
               "aria-expanded",
-              "false"
+              String(!isOpen)
+            );
+
+
+            nav.classList.toggle(
+              "open",
+              !isOpen
             );
 
           }
         );
 
-      }
-    );
 
-  }
+        nav
+          .querySelectorAll("a")
+          .forEach(link => {
 
+            link.addEventListener(
+              "click",
+              () => {
 
-  /* ---------------------------------------------
-     Theme toggle
-     --------------------------------------------- */
+                nav.classList.remove("open");
 
-  if (theme) {
+                menu.setAttribute(
+                  "aria-expanded",
+                  "false"
+                );
 
-    theme.addEventListener(
-      "click",
-      () => {
+              }
+            );
 
-        document.body.classList.toggle(
-          "light-mode"
-        );
-
-        const light =
-          document.body.classList.contains(
-            "light-mode"
-          );
-
-        theme.textContent =
-          light ? "☀" : "☾";
-
-        theme.setAttribute(
-          "aria-label",
-          light
-            ? "Switch to dark mode"
-            : "Switch to light mode"
-        );
-
-        localStorage.setItem(
-          "portfolio-theme",
-          light ? "light" : "dark"
-        );
+          });
 
       }
-    );
 
 
-    if (
-      localStorage.getItem(
-        "portfolio-theme"
-      ) === "light"
-    ) {
+      /* ---------------------------------------------
+         PROJECT FILTERS
+         --------------------------------------------- */
 
-      document.body.classList.add(
-        "light-mode"
-      );
+      const filters =
+        document.querySelectorAll(".filter");
 
-      theme.textContent = "☀";
-
-    }
-
-  }
-
-
-  /* ---------------------------------------------
-     Reveal animations
-     --------------------------------------------- */
-
-  const observer =
-    new IntersectionObserver(
-      entries => {
-
-        entries.forEach(
-          entry => {
-
-            if (
-              entry.isIntersecting
-            ) {
-
-              entry.target.classList.add(
-                "visible"
-              );
-
-              observer.unobserve(
-                entry.target
-              );
-
-            }
-
-          }
+      const projectCards =
+        document.querySelectorAll(
+          "[data-project]"
         );
 
-      },
-      {
-        threshold: 0.12
-      }
-    );
 
-
-  document
-    .querySelectorAll(".reveal")
-    .forEach(
-      element => observer.observe(element)
-    );
-
-
-  /* ---------------------------------------------
-     Project filters
-     --------------------------------------------- */
-
-  document
-    .querySelectorAll(".filter")
-    .forEach(
-      button => {
+      filters.forEach(button => {
 
         button.addEventListener(
           "click",
           () => {
 
-            document
-              .querySelectorAll(".filter")
-              .forEach(
-                item =>
-                  item.classList.remove(
-                    "active"
-                  )
-              );
-
-
-            button.classList.add(
-              "active"
+            filters.forEach(
+              item =>
+                item.classList.remove("active")
             );
+
+
+            button.classList.add("active");
 
 
             const filter =
               button.dataset.filter;
 
 
-            document
-              .querySelectorAll(
-                "[data-project]"
-              )
-              .forEach(
-                card => {
+            projectCards.forEach(card => {
 
-                  const tags =
-                    (
-                      card.dataset.project ||
-                      ""
-                    ).split(" ");
+              const categories =
+                (
+                  card.dataset.project || ""
+                ).split(" ");
 
 
-                  const match =
-                    filter === "all" ||
-                    tags.includes(filter);
+              const show =
+                filter === "all" ||
+                categories.includes(filter);
 
 
-                  card.classList.toggle(
-                    "is-hidden",
-                    !match
-                  );
-
-                }
+              card.classList.toggle(
+                "is-hidden",
+                !show
               );
+
+            });
+
+          }
+        );
+
+      });
+
+
+      /* ---------------------------------------------
+         REVEAL ANIMATION
+         --------------------------------------------- */
+
+      const observer =
+        new IntersectionObserver(
+          entries => {
+
+            entries.forEach(entry => {
+
+              if (
+                entry.isIntersecting
+              ) {
+
+                entry.target.classList.add(
+                  "visible"
+                );
+
+
+                observer.unobserve(
+                  entry.target
+                );
+
+              }
+
+            });
+
+          },
+          {
+            threshold: 0.12
+          }
+        );
+
+
+      document
+        .querySelectorAll(".reveal")
+        .forEach(element => {
+
+          observer.observe(element);
+
+        });
+
+
+      /* ---------------------------------------------
+         THEME BUTTON
+         
+         Keeps the button functional without
+         changing the portfolio into a second
+         conflicting stylesheet.
+         --------------------------------------------- */
+
+      if (themeToggle) {
+
+        themeToggle.addEventListener(
+          "click",
+          () => {
+
+            document.body.classList.toggle(
+              "light-mode"
+            );
+
+
+            const light =
+              document.body.classList.contains(
+                "light-mode"
+              );
+
+
+            themeToggle.textContent =
+              light ? "☀" : "☾";
+
+
+            themeToggle.setAttribute(
+              "aria-label",
+              light
+                ? "Switch to dark mode"
+                : "Switch to light mode"
+            );
 
           }
         );
 
       }
-    );
-
-});
-
-</script>
 
 
-<!-- Existing site JavaScript -->
+      /* ---------------------------------------------
+         KEYBOARD SHORTCUTS
+         
+         1 = Projects
+         2 = Apps
+         3 = Games
+         4 = Research
+         --------------------------------------------- */
 
-<script src="script.js"></script>
+      document.addEventListener(
+        "keydown",
+        event => {
+
+          if (
+            event.target.tagName === "INPUT" ||
+            event.target.tagName === "TEXTAREA" ||
+            event.target.isContentEditable
+          ) {
+            return;
+          }
+
+
+          const sections = {
+            "1": "#projects",
+            "2": "#apps",
+            "3": "#games",
+            "4": "#research"
+          };
+
+
+          const target =
+            sections[event.key];
+
+
+          if (target) {
+
+            const element =
+              document.querySelector(target);
+
+
+            if (element) {
+
+              element.scrollIntoView({
+                behavior: "smooth"
+              });
+
+            }
+
+          }
+
+        }
+      );
+
+
+    });
+
+  </script>
+
+
+  <!-- Existing external JavaScript -->
+  <script src="script.js"></script>
+
 
 </body>
+
 </html>
