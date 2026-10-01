@@ -1,15 +1,87 @@
-# Shubham Kumar Jha — Interactive Portfolio
+# 🚀 Shubham Kumar Jha — Interactive Portfolio
 
-Live: https://shubham-k-jha.github.io/
+<p align="center">
+  <a href="https://shubham-k-jha.github.io/">
+    <img src="https://img.shields.io/badge/🌐_LIVE_PORTFOLIO-61DAFB?style=for-the-badge&logo=github&logoColor=black" alt="Live Portfolio">
+  </a>
+  <a href="https://github.com/shubham-k-jha">
+    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github" alt="GitHub">
+  </a>
+  <a href="https://www.linkedin.com/in/shubhamkjha-datascience">
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin" alt="LinkedIn">
+  </a>
+</p>
 
-## Live Apps
-- Finance Calculator — https://finance-calc-app.streamlit.app/
-- ATS Resume Screener — https://ats--resume-screener.streamlit.app/
-- Job Agent — https://job--agent.streamlit.app/
+<p align="center">
+  <b>Research → Data Analytics → Data Science</b>
+</p>
 
-## Games
-- Neon Pong — https://shubham-k-jha.github.io/Neon-Pong
-- Neon Chess — https://shubham-k-jha.github.io/Neon-Chess-Chess-vs-AI/
+<p align="center">
+  <i>Build with data. Think scientifically. Ship useful things.</i>
+</p>
 
-## Interactive features
-Project filters, live-app launch cards, Game Lab, reveal animations, scroll progress, back-to-top, responsive navigation, and keyboard shortcuts: `1` Projects · `2` Apps · `3` Games · `4` Research.
+---
+
+## 🌐 Live Portfolio
+
+### 👉 [Visit shubham-k-jha.github.io](https://shubham-k-jha.github.io/)
+
+An interactive personal portfolio showcasing my work across:
+
+- 📊 Data Analytics
+- 🐍 Python
+- 🗄️ SQL
+- 📈 Business Intelligence
+- 🤖 Machine Learning
+- 🔬 Scientific Computing
+- 🚀 Interactive Applications
+- 🎮 Browser Games
+
+---
+
+# 🚀 Live Apps
+
+| Application | Description | Launch |
+|---|---|---|
+| 💰 **Finance Calculator** | Interactive financial calculations | [Launch ↗](https://finance-calc-app.streamlit.app/) |
+| 📄 **ATS Resume Screener** | Resume and ATS analysis | [Launch ↗](https://ats--resume-screener.streamlit.app/) |
+| 🤖 **Job Agent** | Job discovery and automation workflow | [Launch ↗](https://job--agent.streamlit.app/) |
+
+---
+
+# 🎮 Game Lab
+
+A small collection of browser-based projects built outside my main data stack.
+
+### 🏓 Neon Pong
+
+Fast-paced browser Pong with a neon arcade interface.
+
+**[▶ Play Neon Pong](https://shubham-k-jha.github.io/Neon-Pong)**
+
+**[View Source ↗](https://github.com/shubham-k-jha/pong)**
+
+---
+
+### ♟️ Neon Chess
+
+Interactive browser chess with an AI opponent.
+
+**[▶ Play Neon Chess](https://shubham-k-jha.github.io/Neon-Chess-Chess-vs-AI/)**
+
+---
+
+# ✨ Interactive Features
+
+The portfolio isn't just a static webpage.
+
+### 🧩 Project Explorer
+
+Filter projects by:
+
+```text
+All
+│
+├── 📊 Analytics
+├── 🤖 Machine Learning
+└── 🔬 Research
