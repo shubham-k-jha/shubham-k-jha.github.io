@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" role="img" aria-labelledby="title desc">
+  <title id="title">Netflix Content Intelligence analytics visualization</title>
+  <desc id="desc">Abstract dark analytics dashboard showing weekly performance, market coverage, lifecycle and forecasting signals.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#090b12"/>
+      <stop offset="1" stop-color="#17131b"/>
+    </linearGradient>
+    <linearGradient id="red" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff4d67"/>
+      <stop offset="1" stop-color="#b20710"/>
+    </linearGradient>
+    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#67e8f9"/>
+      <stop offset="1" stop-color="#3b82f6"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="900" height="560" rx="30" fill="url(#bg)"/>
+  <g opacity=".16" stroke="#9fb1c7">
+    <path d="M50 110H850M50 190H850M50 270H850M50 350H850M50 430H850"/>
+    <path d="M150 70V470M300 70V470M450 70V470M600 70V470M750 70V470"/>
+  </g>
+  <path d="M55 405 C120 390 125 340 185 352 S260 250 320 286 S390 320 445 235 S530 270 585 190 S670 215 735 132 S795 155 845 105" fill="none" stroke="url(#cyan)" stroke-width="8" stroke-linecap="round" filter="url(#glow)"/>
+  <path d="M55 405 C120 390 125 340 185 352 S260 250 320 286 S390 320 445 235 S530 270 585 190 S670 215 735 132 S795 155 845 105" fill="none" stroke="#dffbff" stroke-width="2" stroke-linecap="round"/>
+  <g fill="url(#red)" opacity=".9">
+    <rect x="78" y="338" width="24" height="80" rx="5"/>
+    <rect x="132" y="300" width="24" height="118" rx="5"/>
+    <rect x="186" y="326" width="24" height="92" rx="5"/>
+    <rect x="240" y="252" width="24" height="166" rx="5"/>
+    <rect x="294" y="278" width="24" height="140" rx="5"/>
+    <rect x="348" y="222" width="24" height="196" rx="5"/>
+  </g>
+  <rect x="55" y="50" width="790" height="54" rx="14" fill="#10151f" stroke="#27303d"/>
+  <rect x="75" y="67" width="12" height="20" rx="3" fill="#e50914"/>
+  <path d="M80 67l10 20M90 67l-10 20" stroke="#ff6470" stroke-width="3"/>
+  <text x="108" y="84" fill="#f7f9fc" font-family="Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="2">NETFLIX CONTENT INTELLIGENCE</text>
+  <text x="665" y="83" fill="#718096" font-family="Arial, sans-serif" font-size="12">WEEKLY SIGNALS</text>
+  <g font-family="Arial, sans-serif">
+    <rect x="55" y="455" width="230" height="60" rx="14" fill="#10151f" stroke="#27303d"/>
+    <text x="75" y="480" fill="#fff" font-size="20" font-weight="700">10,960</text>
+    <text x="75" y="500" fill="#7f91a8" font-size="11">GLOBAL OBSERVATIONS</text>
+    <rect x="305" y="455" width="230" height="60" rx="14" fill="#10151f" stroke="#27303d"/>
+    <text x="325" y="480" fill="#fff" font-size="20" font-weight="700">94</text>
+    <text x="325" y="500" fill="#7f91a8" font-size="11">AUDIENCE MARKETS</text>
+    <rect x="555" y="455" width="290" height="60" rx="14" fill="#10151f" stroke="#27303d"/>
+    <text x="575" y="480" fill="#fff" font-size="20" font-weight="700">84.38%</text>
+    <text x="575" y="500" fill="#7f91a8" font-size="11">FORECAST IMPROVEMENT VS NAIVE</text>
+  </g>
+</svg>
