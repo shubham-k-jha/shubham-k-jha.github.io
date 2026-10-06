@@ -768,8 +768,8 @@
         </h2>
 
         <p>
-          Business analytics, customer modelling
-          and scientific machine learning.
+          Business analytics, content intelligence,
+          customer modelling and scientific machine learning.
         </p>
 
       </div>
@@ -782,6 +782,7 @@
         <button
           class="filter active"
           data-filter="all"
+          aria-pressed="true"
           type="button"
         >
           All
@@ -790,6 +791,7 @@
         <button
           class="filter"
           data-filter="analytics"
+          aria-pressed="false"
           type="button"
         >
           📊 Analytics
@@ -798,6 +800,7 @@
         <button
           class="filter"
           data-filter="ml"
+          aria-pressed="false"
           type="button"
         >
           🤖 ML
@@ -806,6 +809,7 @@
         <button
           class="filter"
           data-filter="research"
+          aria-pressed="false"
           type="button"
         >
           🔬 Research
@@ -921,13 +925,82 @@
       <div class="project-grid">
 
 
+        <!-- NETFLIX CONTENT INTELLIGENCE -->
+
+        <article
+          class="project-card reveal netflix-project"
+          data-project="analytics ml"
+        >
+
+          <div class="project-card-visual">
+            <img
+              src="assets/netflix-analytics.svg"
+              alt="Netflix Content Intelligence analytics visualization"
+              loading="lazy"
+            >
+          </div>
+
+          <span>
+            02 · ANALYTICS + SQL + ML
+          </span>
+
+
+          <h3>
+            Netflix Content Intelligence
+          </h3>
+
+
+          <p>
+            End-to-end content analytics built from official Netflix Top 10 data,
+            covering market intelligence, lifecycle, statistics, SQL, forecasting
+            and predictive modelling.
+          </p>
+
+
+          <div class="metric netflix-metric">
+
+            <b>10,960</b>
+
+            <small>
+              global weekly observations · 274 weeks
+            </small>
+
+          </div>
+
+
+          <div class="chips">
+
+            <span>Python</span>
+            <span>SQL</span>
+            <span>Pandas</span>
+            <span>Scikit-learn</span>
+
+          </div>
+
+
+          <div class="project-card-actions">
+            <a
+              href="https://github.com/shubham-k-jha/Netflix-Content-Analytics"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open Netflix Content Intelligence repository on GitHub"
+            >
+              Repository ↗
+            </a>
+
+            <span class="project-status">37/37 tests · 25 SQL analyses</span>
+          </div>
+
+        </article>
+
+
         <article
           class="project-card reveal"
           data-project="analytics ml"
         >
 
           <span>
-            02 · ANALYTICS + ML
+            03 · ANALYTICS + ML
           </span>
 
 
@@ -980,7 +1053,7 @@
         >
 
           <span>
-            03 · SCIENTIFIC ML
+            04 · SCIENTIFIC ML
           </span>
 
 
@@ -1032,7 +1105,7 @@
         >
 
           <span>
-            04 · ANALYTICS + SQL
+            05 · ANALYTICS + SQL
           </span>
 
 

@@ -27,13 +27,13 @@ document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 
 const sections=[...document.querySelectorAll('main section[id]')];
 const links=[...document.querySelectorAll('.nav-links a[href^="#"]')];
-new IntersectionObserver(entries=>{
-  entries.forEach(e=>{if(e.isIntersecting)links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id));});
-},{rootMargin:'-35% 0px -55% 0px'}).observe ? sections.forEach(s=>{}) : null;
 const activeObserver=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{if(e.isIntersecting)links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id));});
+  entries.forEach(e=>{
+    if(!e.isIntersecting) return;
+    links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id));
+  });
 },{rootMargin:'-35% 0px -55% 0px'});
-sections.forEach(s=>activeObserver.observe(s));
+sections.forEach(section=>activeObserver.observe(section));
 
 function onScroll(){
   const max=document.documentElement.scrollHeight-innerHeight;
@@ -43,12 +43,18 @@ function onScroll(){
 addEventListener('scroll',onScroll,{passive:true}); onScroll();
 backTop.addEventListener('click',()=>scrollTo({top:0,behavior:'smooth'}));
 
-document.querySelectorAll('.filter').forEach(filter=>filter.addEventListener('click',()=>{
-  document.querySelectorAll('.filter').forEach(x=>x.classList.remove('active'));
-  filter.classList.add('active');
+const filters=[...document.querySelectorAll('.filter')];
+const projectCards=[...document.querySelectorAll('[data-project]')];
+filters.forEach(filter=>filter.addEventListener('click',()=>{
+  filters.forEach(x=>{
+    const active=x===filter;
+    x.classList.toggle('active',active);
+    x.setAttribute('aria-pressed',String(active));
+  });
   const selected=filter.dataset.filter;
-  document.querySelectorAll('[data-project]').forEach(card=>{
-    card.classList.toggle('is-hidden',selected!=='all'&&!card.dataset.project.includes(selected));
+  projectCards.forEach(card=>{
+    const categories=(card.dataset.project||'').split(/\s+/);
+    card.classList.toggle('is-hidden',selected!=='all'&&!categories.includes(selected));
   });
 }));
 document.getElementById('year').textContent=new Date().getFullYear();
